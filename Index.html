@@ -1,0 +1,1855 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Micheline — Informations, tarifs, galerie et contact.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Micheline">
+<meta property="og:description" content="Informations, tarifs, galerie et contact.">
+<meta property="og:locale" content="fr_FR">
+<title>Micheline</title>
+<link rel="canonical" href="./index.html">
+<link rel="preload" as="image" href="/hero.jpg" fetchpriority="high">
+<link rel="alternate" hreflang="fr-FR" href="./index.html?lang=fr-FR">
+<link rel="alternate" hreflang="fr-BE" href="./index.html?lang=fr-BE">
+<link rel="alternate" hreflang="it-IT" href="./index.html?lang=it-IT">
+<link rel="alternate" hreflang="de-DE" href="./index.html?lang=de-DE">
+<link rel="alternate" hreflang="x-default" href="./index.html?lang=fr-FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+:root{--black:#080808;--panel:#000000;--panel2:#151515;--gold:#c9a84c;--gold2:#e0c77a;--white:#f7f2ed;--muted:#99928b;--line:rgba(201,168,76,.16);--red:#000000;--ok:#2f8a58;--radius:14px;--shadow:0 20px 70px rgba(0,0,0,.42);--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{background:var(--black);color:var(--white);font-family:Inter,system-ui,sans-serif;font-weight:300;line-height:1.7}body.modal-open{overflow:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}.container{width:min(1180px,calc(100% - 36px));margin:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* age */
+#age-overlay{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.93);backdrop-filter:blur(14px);transition:.45s var(--ease)}#age-overlay.hidden{opacity:0;visibility:hidden;pointer-events:none}.age-card{width:min(526px,100%);padding:42px 30px;text-align:center;background:linear-gradient(145deg,#000000,#0d0d0d);border:1px solid var(--gold);border-radius:20px;box-shadow:var(--shadow)}.age-card h2{font:600 2.5rem/1.1 'Playfair Display',serif;color:var(--gold);margin-bottom:14px}.age-card p{color:var(--muted);margin-bottom:26px}.age-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:46px;padding:12px 22px;border-radius:999px;border:1px solid var(--gold);transition:.25s var(--ease)}.btn-primary{background:var(--gold);color:#090909;font-weight:700}.btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}.btn-ghost{background:transparent;color:var(--gold)}.btn-ghost:hover{background:rgba(201,168,76,.1)}.age-card small{display:block;margin-top:26px;color:#62605d;font-size:.74rem}
+/* header */
+header{position:fixed;z-index:1000;top:0;left:0;right:0;background:rgba(8,8,8,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{min-height:72px;display:flex;align-items:center;gap:20px}.logo{font:600 1.45rem 'Playfair Display',serif;color:var(--gold);letter-spacing:1.5px;white-space:nowrap}.logo span{font:400 .9rem Inter,sans-serif;color:var(--white);letter-spacing:1px}.nav-links{display:flex;align-items:center;gap:24px;list-style:none;margin-left:auto}.nav-links a{font-size:.78rem;text-transform:uppercase;letter-spacing:1.3px;color:#ddd;padding:8px 0;border-bottom:1px solid transparent}.nav-links a:hover,.nav-links a:focus-visible{color:var(--gold);border-color:var(--gold)}.nav-social{display:flex;align-items:center;gap:14px}.nav-social a,.nav-social button{display:grid;place-items:center;width:36px;height:36px;border:0;background:none;color:var(--muted);border-radius:50%}.nav-social a:hover,.nav-social button:hover{color:var(--gold);background:rgba(201,168,76,.08)}.lang{position:relative}.lang select{appearance:none;background:#000000;border:1px solid #2b2b2b;color:#ddd;border-radius:999px;padding:8px 28px 8px 12px;font-size:.76rem}.menu{display:none;background:none;border:0;color:var(--white);font-size:1.35rem;width:42px;height:42px}
+/* hero */
+#hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:130px 0 80px;background:radial-gradient(circle at 70% 25%,#1d1510 0,#0b0b0b 45%,#080808 80%);position:relative;overflow:hidden}#hero:after{content:"";position:absolute;bottom:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}.eyebrow{color:var(--gold);font-size:.74rem;text-transform:uppercase;letter-spacing:3px;margin-bottom:14px}.hero h1{font:400 clamp(3.2rem,9vw,6.5rem)/.98 'Playfair Display',serif}.hero h1 em{display:block;color:var(--gold);font-style:italic}.hero .lead{max-width:720px;margin:22px auto;color:var(--muted);font-size:1.05rem}.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:24px 0}.badge{padding:8px 13px;border:1px solid var(--line);border-radius:999px;color:#cfc9c3;font-size:.78rem;background:rgba(255,255,255,.02)}.badge i{color:var(--gold);margin-right:6px}
+/* sections */
+section{padding:88px 0;border-bottom:1px solid rgba(255,255,255,.035)}section:nth-of-type(even){background:#0d0d0d}.section-head{margin-bottom:30px}.section-title{display:inline-flex;align-items:center;gap:12px;font:400 clamp(2rem,5vw,2.65rem)/1.15 'Playfair Display',serif;color:var(--gold);border-bottom:1px solid var(--line);padding-bottom:10px}.section-intro{max-width:720px;color:var(--muted);margin-top:13px}
+/* services */
+.services-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.service-cat{background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.015));border:1px solid rgba(201,168,76,.13);border-radius:var(--radius);padding:22px;transition:.3s var(--ease)}.service-cat:hover{transform:translateY(-3px);border-color:rgba(201,168,76,.4);box-shadow:0 12px 35px rgba(0,0,0,.2)}.service-cat h3{font:600 1.15rem 'Playfair Display',serif;color:var(--gold);margin-bottom:10px}.service-cat ul{list-style:none;color:#d2cdc8;display:grid;gap:5px;font-size:.9rem}.service-cat li:before{content:'✦';color:var(--gold);font-size:.65rem;margin-right:8px}.notice{margin-top:24px;padding:15px 18px;border-left:2px solid var(--gold);background:rgba(201,168,76,.035);color:var(--muted);font-size:.83rem}
+/* prices */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.price-card{padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:#101010}.price-card .duration{color:var(--muted);font-size:.85rem}.price-card strong{display:block;color:var(--white);font:600 2rem 'Playfair Display',serif;margin-top:8px}.price-card small{color:#6f6b66}.price-note{margin-top:18px;color:var(--muted);font-size:.82rem}
+/* gallery */
+.gallery-stage{position:relative;padding:0 52px}.gallery-grid{display:flex;flex-direction:column;gap:18px;min-height:220px}.gallery-batch{display:none;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gallery-batch.active{display:grid}.gallery-item{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;border:1px solid rgba(201,168,76,.1);background:#151515;cursor:zoom-in;transition:.3s var(--ease)}.gallery-item:hover{transform:translateY(-2px);border-color:var(--gold);filter:none}.gallery-empty{grid-column:1/-1;text-align:center;padding:50px 10px;color:#666}.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#000000;color:var(--gold);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:.2s var(--ease)}.gallery-arrow:hover:not(:disabled){background:var(--gold);color:#000000;transform:translateY(-50%) scale(1.05)}.gallery-arrow:disabled{opacity:.25;cursor:default}.gallery-prev{left:0}.gallery-next{right:0}.gallery-page{text-align:center;margin-top:14px;color:#777;font-size:.72rem;letter-spacing:1px}
+/* about/contact */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:start}.about-copy{color:#d0cbc5;font-size:1rem}.about-copy p+p{margin-top:15px}.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fact{padding:18px;border:1px solid var(--line);border-radius:12px;background:#101010}.fact b{display:block;color:var(--gold);font:600 1rem 'Playfair Display',serif;margin-bottom:4px}.fact span{font-size:.82rem;color:var(--muted)}.contact{display:grid;grid-template-columns:1.05fr .95fr;gap:42px}.form{display:grid;gap:13px}.form label{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.form input,.form textarea,.form select{width:100%;padding:13px 14px;background:#000000;border:1px solid #2a2a2a;border-radius:10px;color:var(--white);outline:none}.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,168,76,.08)}.check{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.78rem}.check input{margin-top:4px;accent-color:var(--gold)}.status{min-height:20px;color:var(--muted);font-size:.78rem}.social-list{display:grid;gap:0}.social-row{display:flex;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05)}.social-row i{width:24px;text-align:center;color:var(--gold)}.social-row .label{width:85px;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:1px}.social-row .value{color:#eee}.copy-btn{margin-left:8px;background:transparent;border:1px solid var(--line);color:#ddd;border-radius:999px;padding:5px 10px;font-size:.72rem}.copy-btn:hover{background:var(--gold);color:#000000}
+/* footer/modal */
+footer{padding:40px 0;color:#666;text-align:center;font-size:.76rem}footer .legal{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:10px}footer button{background:none;border:0;color:var(--muted);text-decoration:underline}.modal{position:fixed;inset:0;z-index:3000;display:none;place-items:center;padding:20px;background:rgba(0,0,0,.82);backdrop-filter:blur(8px)}.modal.open{display:grid}.modal-card{width:min(760px,100%);max-height:min(85svh,760px);overflow:auto;background:#000000;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow)}.modal-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:18px}.modal h2{font:400 1.9rem 'Playfair Display',serif;color:var(--gold)}.close{width:40px;height:40px;border-radius:50%;background:#1a1a1a;border:1px solid #333;color:#ddd}.modal h3{color:#ddd;font-size:.95rem;margin:18px 0 5px}.modal p{color:#aaa;font-size:.84rem}.legal-warning{margin-top:20px;padding:12px 14px;background:#000000;border-left:2px solid var(--red);color:#aaa;font-size:.76rem}
+/* lightbox */
+#lightbox{position:fixed;inset:0;z-index:4000;display:none;place-items:center;background:rgba(0,0,0,.94);padding:20px}#lightbox.open{display:grid}#lightbox img{max-width:min(94vw,1000px);max-height:88svh;object-fit:contain;border-radius:8px}#lightbox button{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:#151515;color:#fff;border:1px solid #444;font-size:1.2rem}
+/* toast */
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,30px);opacity:0;z-index:5000;background:var(--gold);color:#000000;padding:10px 18px;border-radius:999px;font-size:.8rem;font-weight:600;transition:.25s var(--ease);pointer-events:none}#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* navigation mobile/desktop */
+.nav{position:relative}.nav-actions{margin-left:auto;display:flex;align-items:center;gap:10px}.menu{flex:0 0 42px}.lang select{min-width:145px;height:42px}
+@media(min-width:761px){.menu{display:none}}
+@media(max-width:760px){.nav{min-height:68px}.nav-actions{gap:7px}.lang select{min-width:112px;height:40px;padding:7px 28px 7px 11px}.menu{display:grid;place-items:center;margin:0;width:42px;height:42px;font-size:1.35rem}.nav-links{top:68px;z-index:1100}.nav-links.open{box-shadow:0 18px 35px rgba(0,0,0,.35)}section-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px}.section-title{max-width:100%}}
+@media(max-width:900px){.nav-links{gap:14px}.nav-social{display:none}.gallery-grid{grid-template-columns:repeat(3,1fr)}.price-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* floating assistant */
+#aiFab{position:fixed;right:20px;bottom:20px;z-index:2500;width:58px;height:58px;border:1px solid var(--gold);border-radius:50%;background:linear-gradient(145deg,#d7b85c,#9c7b29);color:#090909;box-shadow:0 12px 35px rgba(0,0,0,.45);display:grid;place-items:center;font-size:1.2rem;transition:.25s var(--ease)}#aiFab:hover{transform:translateY(-3px) scale(1.03)}#aiFab .ai-dot{position:absolute;right:1px;top:1px;width:11px;height:11px;border-radius:50%;background:#4fc17b;border:2px solid #000000}.ai-panel{position:fixed;right:20px;bottom:88px;z-index:2500;width:min(390px,calc(100vw - 26px));height:min(590px,calc(100svh - 110px));display:none;flex-direction:column;background:#101010;border:1px solid var(--line);border-radius:20px;box-shadow:0 25px 90px rgba(0,0,0,.58);overflow:hidden}.ai-panel.open{display:flex}.ai-head{padding:16px 17px;background:linear-gradient(145deg,#000000,#0e0e0e);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px}.ai-avatar{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#000000;font-weight:800}.ai-head strong{display:block}.ai-head small{color:#777;font-size:.7rem}.ai-close{margin-left:auto;width:34px;height:34px;border-radius:50%;border:1px solid #333;background:#000000;color:#ddd}.ai-messages{flex:1;overflow:auto;padding:15px;display:grid;align-content:start;gap:10px}.ai-msg{max-width:88%;padding:10px 12px;border-radius:14px;font-size:.82rem;line-height:1.5}.ai-msg.bot{background:#181818;border:1px solid #272727;color:#ddd;border-bottom-left-radius:5px}.ai-msg.user{margin-left:auto;background:rgba(201,168,76,.16);border:1px solid rgba(201,168,76,.25);color:#f3ead7;border-bottom-right-radius:5px}.ai-chips{display:flex;flex-wrap:wrap;gap:7px;padding:0 15px 10px}.ai-chip{border:1px solid #343434;background:#151515;color:#ccc;border-radius:999px;padding:7px 10px;font-size:.72rem}.ai-chip:hover{border-color:var(--gold);color:var(--gold)}.ai-input{display:flex;gap:8px;padding:12px;border-top:1px solid #262626;background:#0d0d0d}.ai-input input{flex:1;min-width:0;border:1px solid #2d2d2d;background:#151515;color:#fff;border-radius:999px;padding:10px 13px;outline:none}.ai-input input:focus{border-color:var(--gold)}.ai-send{width:42px;height:42px;border:0;border-radius:50%;background:var(--gold);color:#000000}.ai-disclaimer{padding:0 15px 9px;color:#666;font-size:.62rem;line-height:1.4}
+@media(max-width:760px){.gallery-stage{padding:0 42px}.gallery-arrow{width:36px;height:36px}.container{width:min(100% - 26px,680px)}.menu{display:block;margin-left:auto}.nav-links{position:absolute;left:0;right:0;top:72px;display:none;flex-direction:column;align-items:stretch;gap:0;background:#0b0b0b;border-bottom:1px solid var(--line);padding:10px 18px}.nav-links.open{display:flex}.nav-links a{display:block;padding:12px 0}.nav{gap:8px}.services-grid,.about,.contact{grid-template-columns:1fr}.price-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}section{padding:68px 0}.hero .lead{font-size:.95rem}.facts{margin-top:10px}}
+@media(max-width:430px){.price-grid{grid-template-columns:1fr}.age-card{padding:32px 26px}.gallery-stage{padding:0 38px}.gallery-grid{gap:8px}.badge{font-size:.72rem}.hero h1{font-size:3.2rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+.modal-card h4{color:#d8d2cb;font-size:.86rem;margin:14px 0 5px}.modal-card .legal-list{margin-left:8px}.legal-divider{border:0;border-top:1px solid var(--line);margin:28px 0}</style>
+
+<style id="complete-site-redesign">
+:root{
+  --black:#070707;
+  --panel:#101010;
+  --panel2:#151515;
+  --gold:#c9a84c;
+  --gold2:#ead38b;
+  --white:#f4efe8;
+  --muted:#aaa29a;
+  --line:rgba(201,168,76,.18);
+  --red:#000000;
+  --ok:#2f8a58;
+  --radius:18px;
+  --shadow:0 18px 55px rgba(0,0,0,.34);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{
+  background:
+    radial-gradient(circle at 50% -10%,rgba(201,168,76,.08),transparent 34rem),
+    var(--black);
+  color:var(--white);
+  font-family:Inter,system-ui,sans-serif;
+  font-weight:350;
+  line-height:1.7;
+}
+.container{width:min(1120px,calc(100% - 32px));margin:auto}
+header,.site-header,.navbar,nav{
+  background:rgba(7,7,7,.90)!important;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+section{padding:78px 0}
+.section-head{margin-bottom:30px}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,3vw,2.45rem);
+  letter-spacing:.01em;
+  text-align:left;
+}
+.section-title i{font-size:.72em;color:var(--gold);margin-right:10px}
+.hero,.intro,.banner{
+  min-height:72vh;
+  display:grid;
+  align-items:center;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.55)),
+    radial-gradient(circle at 70% 35%,rgba(201,168,76,.11),transparent 30rem);
+}
+.hero h1,.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.6rem,7vw,5.7rem);
+  line-height:1.02;
+  font-weight:600;
+  letter-spacing:-.025em;
+  max-width:900px;
+}
+.hero p,.hero-subtitle{
+  max-width:700px;
+  color:var(--muted);
+  font-size:1.05rem;
+  margin-top:18px;
+}
+.card,.panel,.fact,.service,.price-card,.gallery-item,.contact>div,.form{
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:none;
+}
+.card,.panel,.fact,.service,.price-card,.contact>div,.form{padding:24px}
+.grid,.cards,.services,.prices,.facts,.social-list{
+  gap:16px!important;
+}
+.facts,.cards,.services,.prices{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.fact b{font-family:'Playfair Display',serif;font-size:1.65rem;color:var(--gold2)}
+.fact span{display:block;color:var(--muted);margin-top:4px}
+.btn{
+  min-height:48px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  padding:12px 20px;
+  transition:transform .2s var(--ease),background .2s var(--ease),border-color .2s var(--ease);
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{
+  background:linear-gradient(135deg,var(--gold),#a98732);
+  color:#000000;
+  border-color:transparent;
+}
+.btn-secondary,.btn-outline{
+  background:transparent!important;
+  color:var(--white);
+  border-color:var(--line);
+}
+input,select,textarea{
+  width:100%;
+  background:#0c0c0c!important;
+  color:var(--white)!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  border-radius:12px!important;
+  padding:12px 14px!important;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:rgba(201,168,76,.55)!important;
+  box-shadow:0 0 0 3px rgba(201,168,76,.08);
+}
+label{color:#d9d1c8}
+.social-row{
+  display:grid;
+  grid-template-columns:28px 105px 1fr;
+  align-items:center;
+  gap:10px;
+  padding:12px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.social-row:last-child{border-bottom:0}
+.social-row i{color:var(--gold)}
+.social-row .label{color:var(--muted)}
+.social-row a{word-break:break-word}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.gallery img{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid var(--line);
+  background:#0d0d0d;
+}
+footer{
+  border-top:1px solid var(--line);
+  background:#090909!important;
+  color:var(--muted);
+}
+footer a:hover{color:var(--gold2)}
+#age-overlay{
+  background:rgba(0,0,0,.95)!important;
+  backdrop-filter:blur(18px);
+}
+#age-overlay>div,.age-box{
+  max-width:560px;
+  border:1px solid var(--line)!important;
+  border-radius:22px!important;
+  background:linear-gradient(180deg,#121212,#0b0b0b)!important;
+  box-shadow:var(--shadow)!important;
+}
+.legal-content,.modal-content{
+  background:#0d0d0d!important;
+  border:1px solid var(--line)!important;
+  border-radius:20px!important;
+}
+.legal-content h2,.legal-content h3{
+  font-family:'Playfair Display',serif;
+  color:var(--gold2);
+}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+@media(max-width:760px){
+  section{padding:58px 0}
+  .container{width:min(100% - 22px,1120px)}
+  .hero{min-height:64vh}
+  .facts,.cards,.services,.prices,.gallery{grid-template-columns:1fr}
+  .hero h1,.hero-title{font-size:clamp(2.45rem,13vw,4rem)}
+  .card,.panel,.fact,.service,.price-card,.contact>div,.form{padding:19px}
+  .social-row{grid-template-columns:26px 86px 1fr;font-size:.94rem}
+}
+@media(min-width:761px){
+  .facts,.cards,.services,.prices{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+</style>
+
+<style id="contact-form-update">
+#contactForm input[required],#contactForm select[required]{border-left:2px solid rgba(201,168,76,.45)!important}
+#contactForm .status{margin-top:4px}
+</style>
+<style id="meslibertines-color-theme">
+:root {
+  --brand: #000000;
+  --brand-dark: #000000;
+  --brand-light: #000000;
+  --ink: #000000;
+  --ink-soft: #000000;
+  --paper: #FFFFFF;
+  --paper-soft: #F5F3F4;
+  --line: #D9CDD1;
+  --text: #000000;
+  --muted: #333333;
+  --shadow: 0 10px 30px rgba(23,23,23,.10);
+}
+
+html, body {
+  background: var(--paper-soft) !important;
+  color: var(--text) !important;
+}
+
+body, input, textarea, select, button {
+  font-family: inherit;
+}
+
+header, nav, .header, .navbar, .topbar, .site-header {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  border-color: var(--ink-soft) !important;
+}
+
+header a, nav a, .header a, .navbar a, .topbar a, .site-header a {
+  color: var(--paper) !important;
+}
+
+a {
+  color: var(--brand) !important;
+}
+
+a:hover, a:focus {
+  color: var(--brand-dark) !important;
+}
+
+button, .btn, .button, input[type="submit"], input[type="button"] {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+  border-color: var(--brand) !important;
+}
+
+button:hover, .btn:hover, .button:hover,
+input[type="submit"]:hover, input[type="button"]:hover {
+  background: var(--brand-dark) !important;
+  border-color: var(--brand-dark) !important;
+}
+
+section, .card, .box, .panel, .profile-card, .contact-card,
+.form-card, .social-card, .gallery-card, .legal-card {
+  border-color: var(--line) !important;
+}
+
+.card, .box, .panel, .profile-card, .contact-card,
+.form-card, .social-card, .gallery-card, .legal-card,
+main > section, .content-card {
+  background: var(--paper) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ink) !important;
+}
+
+label {
+  color: var(--ink) !important;
+}
+
+input, textarea, select {
+  background: var(--paper) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--brand) !important;
+  box-shadow: 0 0 0 3px #000000 !important;
+  outline: none !important;
+}
+
+.social-row, .contact-row, .info-row {
+  border-color: var(--line) !important;
+}
+
+.social-row i, .contact-row i, .info-row i,
+.fa, .fas, .far, .fab {
+  color: var(--brand) !important;
+}
+
+.copy-btn {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+  border-color: var(--ink) !important;
+}
+
+.copy-btn:hover {
+  background: var(--brand) !important;
+  border-color: var(--brand) !important;
+}
+
+#aiFab, .ai-send {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+}
+
+.ai-panel {
+  background: var(--paper) !important;
+  border-color: var(--line) !important;
+  box-shadow: 0 18px 50px rgba(23,23,23,.20) !important;
+}
+
+.ai-head {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+}
+
+.ai-avatar {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+}
+
+.ai-chips button {
+  background: var(--paper) !important;
+  color: var(--brand) !important;
+  border-color: var(--brand) !important;
+}
+
+.ai-chips button:hover {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+}
+
+.ai-disclaimer {
+  background: var(--paper-soft) !important;
+  color: var(--muted) !important;
+}
+
+footer {
+  background: var(--ink) !important;
+  color: #EDE9EA !important;
+  border-top-color: var(--brand) !important;
+}
+
+footer a, footer button {
+  color: var(--paper) !important;
+}
+
+.legal-modal, #legalModal, .modal, .modal-content {
+  background: var(--paper) !important;
+  color: var(--text) !important;
+  border-color: var(--line) !important;
+}
+
+.modal-header, .legal-header {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+}
+
+.legal-divider {
+  border-color: var(--line) !important;
+}
+
+#toast {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+}
+
+.age-gate, #ageGate {
+  background: var(--ink) !important;
+  color: var(--paper) !important;
+}
+
+.age-gate button, #ageGate button {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+}
+
+.badge, .tag, .pill, .status, .accent {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+}
+
+::selection {
+  background: var(--brand) !important;
+  color: var(--paper) !important;
+}
+</style>
+
+
+<style id="black-text-override">
+body, main, section, article, aside, p, li, span, label,
+.card, .box, .panel, .profile-card, .contact-card, .form-card,
+.social-card, .gallery-card, .legal-card, .content-card,
+input, textarea, select {
+  color: #000000 !important;
+}
+h1, h2, h3, h4, h5, h6,
+.title, .subtitle, .description, .value, .label {
+  color: #000000 !important;
+}
+header, nav, footer, .header, .navbar, .topbar, .site-header,
+header a, nav a, .header a, .navbar a, .topbar a, .site-header a {
+  background-color: #000000 !important;
+}
+</style>
+
+
+<style id="final-readability">
+body, body * {
+  text-shadow:none !important;
+}
+p, li, span, small, label, legend, dt, dd,
+.card p, .box p, .panel p, .content p,
+input, textarea, select, option {
+  color:#000000 !important;
+}
+h1,h2,h3,h4,h5,h6,strong,b,
+.title,.subtitle,.description,.label,.value {
+  color:#000000 !important;
+}
+input, textarea, select {
+  background:#FFFFFF !important;
+  color:#000000 !important;
+  border:1px solid #777777 !important;
+}
+input::placeholder, textarea::placeholder {
+  color:#444444 !important;
+  opacity:1 !important;
+}
+option { background:#FFFFFF !important; color:#000000 !important; }
+button, .btn, .button, input[type=submit], input[type=button] {
+  color:#FFFFFF !important;
+}
+a {
+  color:#000000 !important;
+  text-decoration-thickness:1px;
+}
+footer, footer * {
+  color:#FFFFFF !important;
+}
+footer a, footer button {
+  color:#FFFFFF !important;
+}
+#hero { border-bottom:3px solid #000000; }
+</style>
+
+
+<style id="final-menu-and-readability">
+/* Navigation mobile : bouton de menu toujours visible et facilement cliquable */
+@media (max-width:760px){
+  header{z-index:3000}
+  .nav{position:relative;min-height:70px;display:flex;align-items:center}
+  .nav-social{display:none !important}
+  .nav-actions{margin-left:auto;display:flex;align-items:center;gap:8px}
+  .lang select{min-width:92px;height:42px}
+  .menu{
+    display:grid !important;
+    place-items:center !important;
+    flex:0 0 46px !important;
+    width:46px !important;
+    height:46px !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:#000000 !important;
+    color:#FFFFFF !important;
+    border:2px solid #FFFFFF !important;
+    border-radius:10px !important;
+    font-size:1.35rem !important;
+    box-shadow:0 3px 12px rgba(0,0,0,.35) !important;
+    position:relative !important;
+    z-index:3100 !important;
+  }
+  .menu:hover,.menu:focus-visible{
+    background:#000000 !important;
+    outline:3px solid #000000 !important;
+    outline-offset:2px;
+  }
+  .nav-links{
+    top:70px !important;
+    display:none !important;
+    z-index:3050 !important;
+    background:#FFFFFF !important;
+    border-bottom:2px solid #000000 !important;
+    box-shadow:0 12px 30px rgba(0,0,0,.2) !important;
+  }
+  .nav-links.open{display:flex !important}
+  .nav-links a{
+    color:#000000 !important;
+    background:#FFFFFF !important;
+    font-weight:600 !important;
+    padding:14px 8px !important;
+    border-bottom:1px solid #ddd !important;
+  }
+  .nav-links a:hover,.nav-links a:focus-visible{
+    color:#000000 !important;
+    background:#f7f3f4 !important;
+  }
+}
+
+/* Contraste global : texte noir sur surfaces claires, blanc sur zones noires. */
+body{background:#FFFFFF !important;color:#000000 !important}
+main{background:#FFFFFF !important}
+section{background:#FFFFFF !important;color:#000000 !important;border-color:#e4e4e4 !important}
+section:nth-of-type(even){background:#F7F7F7 !important}
+.section-title,h1,h2,h3,h4,h5,h6,p,li,label,
+.service-cat,.price-card,.fact,.about-copy,.section-intro,
+.gallery-page,.status,.social-row .label,.social-row .value{
+  color:#000000 !important;
+}
+.service-cat,.price-card,.fact,.gallery-item{
+  background:#FFFFFF !important;
+}
+.form input,.form textarea,.form select{
+  background:#FFFFFF !important;
+  color:#000000 !important;
+  border-color:#777777 !important;
+}
+.form input::placeholder,.form textarea::placeholder{
+  color:#444444 !important;
+  opacity:1 !important;
+}
+.gallery-placeholder{visibility:hidden}
+</style>
+
+
+<style id="age-final-fix">
+#age-overlay.hidden{
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+</style>
+
+
+<style id="menu-white-override">
+/* Menu entièrement blanc : aucun bordeaux sur la navigation */
+#menu,
+.menu,
+.menu-toggle,
+#menuToggle,
+#hamburger,
+.hamburger,
+.nav-toggle,
+.mobile-menu,
+.mobile-nav,
+nav .menu,
+header nav {
+  --menu-accent: #FFFFFF !important;
+}
+
+/* Bouton du menu */
+#menuToggle,
+#hamburger,
+.menu-toggle,
+.hamburger,
+.nav-toggle {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+  border: 1px solid #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(0,0,0,.22) !important;
+}
+
+/* Icônes du bouton */
+#menuToggle i,
+#hamburger i,
+.menu-toggle i,
+.hamburger i,
+.nav-toggle i,
+#menuToggle svg,
+#hamburger svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* Liens et fond du menu */
+nav,
+nav ul,
+nav .menu,
+#menu,
+.mobile-menu,
+.mobile-nav {
+  background: #FFFFFF !important;
+}
+
+nav a,
+nav .menu a,
+#menu a,
+.mobile-menu a,
+.mobile-nav a {
+  color: #000000 !important;
+  background: #FFFFFF !important;
+  text-shadow: none !important;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active,
+#menu a:hover,
+#menu a:focus,
+.mobile-menu a:hover,
+.mobile-menu a:focus {
+  color: #000000 !important;
+  background: #F2F2F2 !important;
+}
+
+/* Éléments actifs : blanc/noir, sans bordeaux */
+nav a.active,
+nav a[aria-current="page"],
+#menu a.active,
+.mobile-menu a.active {
+  color: #000000 !important;
+  background: #EAEAEA !important;
+  border-color: #000000 !important;
+}
+
+/* Petite flèche éventuelle du menu */
+nav .arrow,
+nav .chevron,
+#menu .arrow,
+#menu .chevron {
+  color: #000000 !important;
+}
+
+/* Sur fond sombre, le bouton reste très visible */
+@media (max-width: 800px) {
+  #menuToggle,
+  #hamburger,
+  .menu-toggle,
+  .hamburger,
+  .nav-toggle {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    border-radius: 10px !important;
+  }
+}
+</style>
+
+
+<style id="menu-final-white-three-lines">
+/* Bouton menu : immédiatement après la langue, blanc éclatant + 3 traits noirs */
+@media (max-width:760px){
+  .nav-actions{
+    display:flex !important;
+    align-items:center !important;
+    gap:8px !important;
+    margin-left:auto !important;
+  }
+
+  .nav-actions .lang{
+    flex:0 0 auto !important;
+  }
+
+  .nav-actions .menu,
+  button#menu.menu{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:5px !important;
+    flex:0 0 48px !important;
+    width:48px !important;
+    height:48px !important;
+    min-width:48px !important;
+    min-height:48px !important;
+    margin:0 !important;
+    padding:0 !important;
+    background:#FFFFFF !important;
+    color:#000000 !important;
+    border:2px solid #000000 !important;
+    border-radius:10px !important;
+    box-shadow:0 3px 12px rgba(0,0,0,.28) !important;
+    position:relative !important;
+    z-index:3100 !important;
+    -webkit-appearance:none !important;
+    appearance:none !important;
+  }
+
+  /* On masque l'icône Font Awesome et on dessine 3 traits nets. */
+  .nav-actions .menu i,
+  button#menu.menu i{
+    display:none !important;
+  }
+
+  .nav-actions .menu::before,
+  .nav-actions .menu::after,
+  button#menu.menu::before,
+  button#menu.menu::after{
+    content:"" !important;
+    display:block !important;
+    width:24px !important;
+    height:3px !important;
+    background:#000000 !important;
+    border-radius:3px !important;
+    position:absolute !important;
+    left:50% !important;
+    transform:translateX(-50%) !important;
+  }
+
+  .nav-actions .menu::before,
+  button#menu.menu::before{
+    top:13px !important;
+    box-shadow:0 8px 0 #000000 !important;
+  }
+
+  .nav-actions .menu::after,
+  button#menu.menu::after{
+    top:29px !important;
+  }
+
+  .nav-actions .menu:hover,
+  .nav-actions .menu:focus-visible,
+  button#menu.menu:hover,
+  button#menu.menu:focus-visible{
+    background:#FFFFFF !important;
+    color:#000000 !important;
+    border-color:#000000 !important;
+    outline:3px solid rgba(255,255,255,.7) !important;
+    outline-offset:2px !important;
+  }
+
+  .nav-actions .menu:active,
+  button#menu.menu:active{
+    transform:scale(.97);
+  }
+}
+
+@media (min-width:761px){
+  button#menu.menu{display:none !important;}
+}
+</style>
+
+
+<style id="hero-background-readability">
+#hero .hero h1,
+#hero .hero h1 em,
+#hero .hero .lead,
+#hero .hero .eyebrow{
+  text-shadow:0 2px 10px rgba(0,0,0,.75) !important;
+}
+#hero .hero h1{color:#fff !important;}
+#hero .hero h1 em{color:#D4AF37 !important;}
+#hero .hero .lead{color:#fff !important;}
+</style>
+
+
+<style id="micheline-theme-override">
+:root {
+  --burgundy: #000000 !important;
+  --primary: #000000 !important;
+  --accent: #000000 !important;
+}
+</style>
+</head>
+<body><div id="site-discreet-note" style="display:none" aria-hidden="true">Site d’information et de prise de contact réservé aux adultes.</div>
+<div id="age-overlay" role="dialog" aria-modal="true" aria-labelledby="age-title">
+  <div class="age-card">
+    <h2 id="age-title">✦ Micheline</h2>
+    <p data-i18n="ageText">Ce site est réservé à un public majeur. Confirmez votre âge pour continuer.</p>
+    <div class="age-actions"><button type="button" class="btn btn-primary" id="ageYes" data-i26n="ageYes" >J'ai plus de 26 ans</button><button class="btn btn-ghost" id="ageNo" data-i26n="ageNo">Je quitte</button></div>
+    <small data-i18n="ageSmall">L'accès au site ne vaut pas consentement à une prestation et les conditions applicables doivent être respectées.</small>
+  </div>
+</div>
+
+<script id="age-verification-early">
+(function(){
+  try{
+    var ok=localStorage.getItem('ageVerified')==='true' ||
+      document.cookie.split('; ').some(function(v){return v==='ageVerified=true';});
+    if(ok){
+      var el=document.getElementById('age-overlay');
+      if(el) el.classList.add('hidden');
+    }
+  }catch(e){}
+})();
+</script>
+<header><div class="container nav">
+  <a class="logo" href="#hero" aria-label="Micheline">Micheline <span>Micheline</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" data-i18n="home">Accueil</a></li><li><a href="#services" data-i18n="services">Prestations</a></li><li><a href="#prices" data-i18n="prices">Tarifs</a></li><li><a href="#gallery" data-i18n="gallery">Galerie</a></li><li><a href="#contact" data-i18n="contact">Contact</a></li>
+  </ul>
+  <div class="nav-social"><a href="https://x.com/Ldeplacement" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a><a href="https://instagram.com/aliciacaillot1" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a><button id="signalNav" type="button" aria-label="Copier l'identifiant Signal"><i class="fab fa-signal-messenger"></i></button></div>
+  <div class="nav-actions">
+    <div class="lang"><label class="sr-only" for="language">Langue</label><select id="language"><option value="fr-FR">FR · France</option><option value="fr-BE">FR · Belgique</option><option value="it-IT">IT · Italia</option><option value="de-DE">DE · Deutschland</option></select></div>
+    <button class="menu" id="menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks"><i class="fas fa-bars"></i></button>
+  </div>
+</div></header>
+<main>
+<section id="hero" aria-label="Micheline"><img class="hero-bg" src="/hero.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"><div class="hero-scrim" aria-hidden="true"></div><div class="container hero"><h1>Micheline</h1><a class="btn btn-primary" href="#contact"><i class="fas fa-calendar-check"></i><span data-i18n="cta">Prendre contact</span></a></div></section>
+<section id="services"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-feather-alt"></i><span data-i18n="servicesTitle">Prestations</span></h2></div>
+<div class="services-grid">
+<div class="service-cat"><h3 data-i18n="s1t">Massages</h3><ul><li data-i18n="s1a">Relaxant</li><li data-i18n="s1b">Californien</li><li data-i18n="s1c">Prostate</li><li data-i18n="s1d">Tantrique</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s2t">Jeux sensuels</h3><ul><li data-i18n="s2a">Strip-tease</li><li data-i18n="s2b">Caresses</li><li data-i18n="s2c">French kiss</li><li data-i18n="s2d">Facesitting</li><li data-i18n="s2e">Footjob</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s3t">Préliminaires & rapports</h3><ul><li data-i18n="s3a">Cunnilingus</li><li data-i18n="s3b">Branlette espagnole</li><li data-i18n="s3c">Fellation nature</li><li data-i18n="s3d">Fellation protégée</li><li data-i18n="s3e">Gorge profonde</li><li data-i18n="s3f">Rapport protégé</li><li data-i18n="s3g">Toutes positions Kamasutra</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s4t"></h3><ul><li data-i18n="s4a"> douce (sur demande)</li><li data-i18n="s4b">Safe word systématique</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s5t">Sexcam</h3><ul><li data-i18n="s5a">Show en direct</li><li data-i18n="s5b">Cam à cam</li><li data-i18n="s5c">Jouets interactifs</li><li data-i18n="s5d">Scénarios sur mesure</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s6t"></h3><ul><li data-i18n="s6a">Photos intimes</li><li data-i18n="s6b">Vidéos personnalisées</li><li data-i18n="s6c">Pack sur demande</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s7t"></h3><ul><li data-i18n="s7a">Urophilie (donneuse) — uniquement sur demande et consentement éclairé</li></ul></div>
+<div class="service-cat"><h3 data-i18n="s8t"></h3><ul><li data-i18n="s8a">Douche avant / après</li><li data-i18n="s8b">Serviettes propres et peignoir</li><li data-i18n="s8c">Boisson offerte</li></ul></div>
+</div></div></section>
+<section id="prices"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-euro-sign"></i><span data-i18n="pricesTitle">Tarifs</span></h2></div><div class="price-grid">
+<div class="price-card"><span class="duration" data-i18n="p30">30 minutes</span><strong>100 €</strong></div><div class="price-card"><span class="duration" data-i18n="p1">1 heure</span><strong>150 €</strong></div><div class="price-card"><span class="duration" data-i18n="p2">2 heures</span><strong>250 €</strong></div><div class="price-card"><span class="duration" data-i18n="p3">3 heures</span><strong>400 €</strong></div><div class="price-card"><span class="duration" data-i18n="pn">Nuit (22h–8h)</span><strong>500 €</strong></div>
+</div></div></section>
+<section id="gallery"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-images"></i><span data-i18n="galleryTitle">Galerie</span></h2></div><div class="gallery-stage" id="galleryStage">
+<button class="gallery-arrow gallery-prev" id="galleryPrev" type="button" data-i18n-aria="galleryPrev" aria-label="Photos précédentes"><i class="fas fa-chevron-left"></i></button>
+<div class="gallery-grid" id="galleryGrid"><div class="gallery-empty" id="galleryLoader"><i class="fas fa-spinner fa-spin"></i></div></div>
+<button class="gallery-arrow gallery-next" id="galleryNext" type="button" data-i18n-aria="galleryNext" aria-label="Photos suivantes"><i class="fas fa-chevron-right"></i></button>
+<div class="gallery-page" id="galleryPage" aria-live="polite"></div>
+</div></div></section>
+<section id="about"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-user"></i><span data-i18n="aboutTitle">À propos</span></h2></div><div class="about"><div class="about-copy"><p><strong style="color:var(--gold);font-family:'Playfair Display',serif">Micheline</strong>, <span data-i18n="aboutAge">26 ans</span>, <span data-i18n="aboutHeight">1m68</span>.</p></div><div class="facts"><div class="fact"><b>18+</b><span data-i18n="factAdult">Accès réservé aux majeurs</span></div></div></div></div></section>
+<section id="contact"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-paper-plane"></i><span data-i18n="contactTitle">Prendre contact</span></h2></div><div class="contact"><form class="form" id="contactForm">
+<label for="name">Nom / Prénom</label>
+<input id="name" type="text" autocomplete="name" required placeholder="Votre nom">
+
+<label for="address">Adresse postale</label>
+<input id="address" type="text" autocomplete="street-address" required placeholder="Votre adresse postale">
+
+<label for="city">Ville</label>
+<input id="city" type="text" autocomplete="address-level2" required placeholder="Votre ville">
+
+<label for="phone">Téléphone</label>
+<input id="phone" type="tel" autocomplete="tel" placeholder="+33…">
+
+<label for="contactApp">Application de contact</label>
+<select id="contactApp" required>
+  <option value="" selected disabled>Choisissez une application</option>
+  <option value="telegram">Telegram</option>
+  <option value="instagram">Instagram</option>
+
+<option value="x">X</option>
+<option value="signal">Signal</option>
+<option value="teleguard">TeleGuard</option>
+</select>
+
+<label for="date">Date & heure souhaitée</label>
+<input id="date" type="datetime-local">
+
+<label for="duration">Durée</label>
+<select id="duration">
+  <option value="30min" selected>30 min</option>
+  <option value="1h" selected>1 h</option>
+  <option value="2h">2 h</option>
+  <option value="3h">3 h</option>
+  <option value="nuit">Nuit</option>
+</select>
+
+<label for="message">Message</label>
+<textarea id="message" rows="4" placeholder="Votre message…"></textarea>
+
+<input id="website" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-10000px;opacity:0">
+
+<label class="check">
+  <input id="ageCheck" type="checkbox" required>
+  <span>Je confirme avoir plus de 18 ans et avoir lu les informations légales et de confidentialité.</span>
+</label>
+
+<button class="btn btn-primary" type="submit" id="submit">
+  <i class="fas fa-paper-plane"></i><span>Envoyer via l’application choisie</span>
+</button>
+<div class="status" id="formStatus" aria-live="polite"></div>
+</form>
+<div><div class="social-list"><div class="social-row"><i class="fab fa-x-twitter"></i><span class="label">X</span><span class="value"><a href="https://x.com/Ldeplacement" target="_blank" rel="noopener noreferrer">@Ldeplacement</a></span></div><div class="social-row"><i class="fab fa-instagram"></i><span class="label">Instagram</span><span class="value"><a href="https://instagram.com/aliciacaillot1" target="_blank" rel="noopener noreferrer">@aliciacaillot1</a></span></div><div class="social-row"><i class="fab fa-signal-messenger"></i><span class="label">Signal</span><span class="value">Coucou.08 <button class="copy-btn" data-copy="Coucou.08" data-i18n="copy">Copier</button></span></div><div class="social-row"><i class="fas fa-shield-alt"></i><span class="label">TeleGuard</span><span class="value">SL327SBV7 <button class="copy-btn" data-copy="SL327SBV7" data-i18n="copy">Copier</button></span></div><div class="social-row"><i class="fab fa-telegram"></i><span class="label">Telegram</span><span class="value"><a href="https://t.me/simplementmoi19" target="_blank" rel="noopener noreferrer">@simplementmoi19</a></span></div><div class="social-row"><i class="fas fa-envelope"></i><span class="label">E-mail</span><span class="value"><a href="mailto:aliciacaillot@boiseo.online">aliciacaillot@boiseo.online</a></span></div></div></div></div></div></section>
+</main>
+<!-- ASSISTANT FLOTTANT -->
+<button id="aiFab" type="button" aria-label="Ouvrir la messagerie" aria-expanded="false"><i class="fas fa-comment-dots"></i><span class="ai-dot"></span></button>
+<div class="ai-panel" id="aiPanel" role="dialog" aria-modal="false" aria-labelledby="aiTitle">
+  <div class="ai-head"><div class="ai-avatar"><i class="fas fa-comment-dots"></i></div><div><strong id="aiTitle">Micheline · Assistant</strong><small id="aiSub">En ligne · Réponse instantanée</small></div><button class="ai-close" id="aiClose" type="button" aria-label="Fermer"><span aria-hidden="true">×</span></button></div>
+  <div class="ai-messages" id="aiMessages"></div>
+  <div class="ai-chips" id="aiChips"></div>
+  <div class="ai-disclaimer" id="aiDisclaimer">Je réponds à partir des informations actuellement présentes sur cette page.</div>
+  <form class="ai-input" id="aiForm"><input id="aiInput" autocomplete="off" maxlength="300" placeholder="Posez votre question…"><button class="ai-send" type="submit" aria-label="Envoyer"><i class="fas fa-arrow-up"></i></button></form>
+</div>
+
+<footer><div class="container"><div>✦ Micheline · <span data-i18n="footerAge">26 ans</span> ✦</div><div class="legal"><button id="legalBtn" data-i18n="legal">Termes et Conditions | Politique de confidentialité</button><span>•</span><span>Moyens de paiement acceptés pour les prestations : PayPal, Transcash, Wero, PCS et Neosurf Card.<br>
+Remise en main propre pour le premier rendez-vous. Paiement en espèces accepté dès le deuxième rendez-vous.</span><span>•</span><span>Hébergé en France (OVH)</span><span>•</span><span>© 2026 Micheline — Tous droits réservés.</span></div><div style="margin-top:14px">STOP HUMAN TRAFFICKING</div><div style="margin-top:6px;max-width:760px;margin-left:auto;margin-right:auto">Nous luttons contre la traite des êtres humains et les abus sur mineurs. Si vous êtes victime ou si vous connaissez quelqu'un qui a besoin d'aide, veuillez nous le signaler et contacter les organismes d'aide officiels.</div><div style="margin-top:6px">Ressources d'aide : renate-europe.net · stopthetraffik.org</div></div></footer>
+<div class="modal" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalTitle"><div class="modal-card"><div class="modal-top"><h2 id="legalTitle">Termes et conditions</h2><button class="close" id="legalClose" aria-label="Fermer">×</button></div><h3>TERMES ET CONDITIONS</h3>
+<h3>CONDITIONS GÉNÉRALES D&#x27;UTILISATION DU SITE</h3>
+<h3>1. Parties à cet accord et contrepartie</h3>
+<p>Les parties au présent Contrat (le « Contrat ») sont Vous (l&#x27;« Utilisateur ») et Micheline (la « Société »). Tels qu&#x27;utilisés dans le présent Contrat, les termes « nous » et « notre » sont utilisés de manière interchangeable pour désigner Micheline et le site Web ; les termes « Vous » et « Votre » sont utilisés pour désigner Vous, l&#x27;Utilisateur.</p>
+<h4>1.1 En accédant aux documents sur le site Web et contre toute autre contrepartie valable et valable, dont vous et Micheline reconnaissez le caractère suffisant, vous acceptez par la présente d&#x27;être lié par tous les termes et conditions énoncés dans le présent Accord.</h4>
+<h4>1.2 Sous réserve de votre acceptation des termes et conditions énoncés dans le présent accord, Micheline accepte de vous accorder un droit personnel limité, non transférable, d&#x27;accéder au contenu du site Web et de ses éventuels sites affiliés exploités par Micheline.</h4>
+<h4>1.3 Le présent Accord est sujet à modification par Micheline à tout moment et les modifications entreront en vigueur dès notification aux UTILISATEURS par publication sur ou via un hyperlien vers le site Web. Vous ne pouvez pas modifier, supprimer, ajouter ou modifier l&#x27;un de ces termes et conditions, et toute tentative de modification sera nulle et sans effet.</h4>
+<h4>1.4 Toute action de votre part visant à ajouter une page de ce site Web à vos favoris par laquelle la page d&#x27;avertissement, la page de vérification de l&#x27;âge et/ou la page des conditions d&#x27;utilisation est contournée constitue une acceptation implicite de votre part de tous les termes et conditions énoncés dans les présentes ainsi qu&#x27;une reconnaissance explicite de votre part du fait que vous êtes un adulte et âgé d&#x27;au moins 18 ans ou ayant atteint l&#x27;âge de la majorité en vertu des lois de votre État, province ou pays.</h4>
+<h4>1.5 Le présent accord intègre par référence toutes les autres déclarations juridiques trouvées sur le site Web.</h4>
+<h3>2. Vérification de l&#x27;utilisateur</h3>
+<p>TOUS LES MATÉRIAUX, Y COMPRIS LES MESSAGES ET AUTRES COMMUNICATIONS, CONTENUS SUR LE SITE WEB SONT DESTINÉS À ÊTRE DISTRIBUÉS EXCLUSIVEMENT À DES ADULTES CONSENTANTS DANS DES ENDROITS OÙ LES MATÉRIAUX, MESSAGES ET AUTRES COMMUNICATIONS CONTENUS SUR LE SITE WEB NE VIOLENT AUCUNE NORME COMMUNAUTAIRE NI TOUTE LOI FÉDÉRALE, ÉTATIQUE OU LOCALE OU RÉGLEMENTATION DE TOUT PAYS. AUCUNE PERSONNE DE MOINS DE DIX-HUIT (18) ANS (les utilisateurs doivent avoir l&#x27;âge légal selon les lois locales en vigueur) NE PEUT DIRECTEMENT OU INDIRECTEMENT CONSULTER OU POSSÉDER LE CONTENU DU SITE WEB OU PASSER UNE COMMANDE POUR DES BIENS OU SERVICES PUBLIÉS SUR OU DANS LE SITE WEB.</p>
+<h4>2.1 PAR LA PRÉSENTE, VOUS RECONNAISSEZ ET DÉCLAREZ QUE VOUS SAVEZ ET COMPRENEZ QUE LES MATÉRIAUX PRÉSENTÉS SUR ET/OU TÉLÉCHARGEABLES À PARTIR DU SITE WEB COMPRENNENT DES REPRÉSENTATIONS VISUELLES, AUDIO ET/OU TEXTUELLES EXPLICITES DE NUDITÉ ET D&#x27;ACTIVITÉS SEXUELLES, Y COMPRIS SANS LIMITATION, HÉTÉROSEXUELLES, BI- ACTIVITÉS SEXUELLES, HOMOSEXUELLES ET TRANSSEXUELLES À NATURE SEXUELLE EXPLICITE ; QUE VOUS ÊTES FAMILIER AVEC DES MATÉRIAUX DE CE TYPE ; QUE VOUS N&#x27;ÊTES PAS OFFENSÉ PAR DE TELS MATÉRIAUX ; ET QU&#x27;EN ACCEPTANT CES TERMES ET CONDITIONS, VOUS GARANTISSEZ À ALICIA CAILLOT QUE VOUS CHERCHEZ INTENTIONNELLEMENT ET EN CONSCIENCE L&#x27;ACCÈS À DE TELS MATÉRIAUX SEXUELS EXPLICITES POUR VOTRE PROPRE VISIONNAGE PERSONNEL.</h4>
+<h4>2.2 VOUS DÉCLAREZ ET GARANTISSEZ EN OUTRE QUE VOTRE ACCEPTATION DE CES TERMES ET CONDITIONS CONSTITUE UNE DEMANDE SEXUELLEMENT EXPLICITE DE VOTRE PART DE RECEVOIR DU MATÉRIEL SEXUELLEMENT EXPLICITE VIA LE SITE WEB ET QUE VOUS N&#x27;AVEZ NOTIFIÉ AUCUNE AGENCE GOUVERNEMENTALE QUE VOUS NE SOUHAITEZ PAS RECEVOIR DU MATÉRIEL SEXUELLEMENT ORIENTÉ.</h4>
+<h4>2.3 VOUS DÉCLAREZ, AFFIRMEZ ET GARANTISSEZ EN OUTRE QUE VOUS AVEZ ACTUELLEMENT PLUS DE DIX-HUIT ANS (VINGT ET UN (21) DANS LES ENDROITS OÙ DIX-HUIT ANS N&#x27;EST PAS L&#x27;ÂGE DE LA MAJORITÉ) ET ÊTES CAPABLE DE CONCLURE LÉGALEMENT CET ACCORD.</h4>
+<h3>3. Code de conduite de l&#x27;utilisateur</h3>
+<p>Vous acceptez, garantissez et vous engagez à utiliser le site Web conformément au code de conduite suivant et vous acceptez et reconnaissez qu&#x27;à notre seule discrétion, nous pouvons, mais ne sommes pas obligés de rejeter ou de supprimer tout matériel publié ou téléchargé par vous qui viole toute disposition suivante, et/ou de mettre fin à votre droit d&#x27;utiliser ou d&#x27;accéder au site Web pour violation de ces dispositions :</p>
+<h4>3.1 Le site d&#x27;Micheline a une politique de tolérance zéro à l&#x27;égard de la traite des êtres humains, de la prostitution et de tout autre comportement illégal. Nous coopérons avec les forces de l&#x27;ordre, conformément à une procédure appropriée, telle qu&#x27;une assignation à comparaître, pour enquêter sur des activités criminelles. Les publicités qui violent notre politique de tolérance zéro seront rejetées, et la soumission de telles publicités pour une publication ou une activité d&#x27;utilisateur qui viole notre politique de tolérance zéro peut entraîner un renvoi aux forces de l&#x27;ordre et une fermeture immédiate du compte. Vous n&#x27;utiliserez pas ce site en violation des politiques du site ou de toute loi fédérale, étatique ou locale, et vous signalerez les violations aux autorités compétentes.</h4>
+<h4>3.2 Vous n&#x27;utiliserez pas le site Web pour vous livrer à toute forme de conduite illégale, de harcèlement ou de comportement offensant, y compris, mais sans s&#x27;y limiter, la publication ou le téléchargement de communications ou de tout contenu graphique, vidéo ou audio sur le site Web contenant des propos diffamatoires, calomnieux, abusifs ou diffamatoires, ou racistes, obscènes, grossiers ou offensants.</h4>
+<h4>3.3 Vous n&#x27;utiliserez pas le site Web pour porter atteinte aux droits à la vie privée, aux droits de propriété ou à d&#x27;autres droits civils de toute personne.</h4>
+<h4>3.4 Vous ne publierez pas de messages ni n&#x27;utiliserez le site Web d&#x27;une manière qui (i) viole, plagie ou enfreint les droits d&#x27;un tiers, y compris, mais sans s&#x27;y limiter, toute loi sur les droits d&#x27;auteur ou les marques, la vie privée ou d&#x27;autres droits personnels ou de propriété, ou (ii) est frauduleuse ou autrement illégale ou enfreint toute loi.</h4>
+<h3>4. Octroi d’une licence limitée avec réserves</h3>
+<p>Vous reconnaissez et acceptez que tous les éléments contenus sur le site Web sont exclusifs et constituent de précieux droits d&#x27;auteur, marques de commerce et autres propriétés intellectuelles appartenant à Micheline ou à d&#x27;autres qui ont autorisé l&#x27;utilisation de ces éléments à Micheline. Vous reconnaissez et acceptez qu&#x27;en tant que tel, vous ne pouvez accéder, visualiser, télécharger, recevoir et autrement utiliser le matériel disponible sur le site Web qu&#x27;avec l&#x27;autorisation d&#x27;Micheline.</p>
+<h4>4.1 Vous reconnaissez que vous comprenez qu&#x27;Micheline n&#x27;autorise l&#x27;accès à aucune partie du site Web d&#x27;une manière contraire aux dispositions expresses du présent Accord.</h4>
+<h4>4.2 Vous déclarez et garantissez en outre à Micheline que votre accord avec ces termes et conditions constitue un accord selon lequel vous n&#x27;accéderez pas, ou ne tenterez pas d&#x27;accéder, à tout matériel disponible sur le site Web d&#x27;une manière non expressément autorisée par Micheline.</h4>
+<h4>4.3 Vous reconnaissez par la présente que vous comprenez qu&#x27;Micheline n&#x27;autorise pas l&#x27;accès, la visualisation, le téléchargement, la duplication, la réception, la transmission, la diffusion ou toute autre utilisation du matériel contenu sur le site Web à ou par toute personne, Y COMPRIS VOUS, qui est dans quelconque des zones désignées comme ZONES INTERDITES ci-dessous.</h4>
+<h4>4.4 Vous reconnaissez et acceptez par la présente qu&#x27;Micheline n&#x27;autorise l&#x27;accès à aucune partie du site Web d&#x27;une manière qui contourne le présent Accord. Vous reconnaissez et acceptez en outre que vous ne pouvez pas « mettre en signet » des photographies ou d&#x27;autres documents à l&#x27;intérieur du site Web ou accéder directement aux fichiers désignés comme faisant partie du site Web, sauf via les pages d&#x27;autorisation appropriées comme spécifié par Micheline et vous acceptez en outre que vous ne tenterez pas de le faire.</h4>
+<h4>4.5 Vous reconnaissez en outre que vous comprenez et acceptez que tout accès, visualisation, téléchargement, réception, duplication ou autre utilisation non autorisés de documents provenant du site Web en violation des termes et conditions énoncés dans les présentes constitue une ou plusieurs violation(s) intentionnelle(s) des droits de propriété intellectuelle d&#x27;Micheline et potentiellement d&#x27;autrui et d&#x27;autres droits sur ces matériels.</h4>
+<h3>5. Zones interdites</h3>
+<p>Toutes les zones suivantes constituent des ZONES INTERDITES à partir desquelles aucune partie du site Web ne peut être consultée, visualisée, téléchargée ou autrement reçue :</p>
+<h4>5.1 Toutes les régions des pays suivants : Afghanistan, Koweït, Iran, Irak, Japon, Jordanie, Libye, Pakistan, République de Chine, Singapour, Arabie Saoudite, Syrie et Émirats arabes unis.</h4>
+<h4>5.2 Toutes les parties de tout autre lieu géophysique ou juridiction correspondant à une entité politique ou partie d&#x27;une entité politique dans laquelle l&#x27;accès, la visualisation, le téléchargement, la diffusion ou toute autre utilisation des éléments contenus dans le site Web constitueraient une violation de toute loi, réglementation, règle ou coutume, y compris les normes communautaires contemporaines de cette juridiction en ce qui concerne la visualisation, l&#x27;accès ou toute autre utilisation par des adultes de matériels constitués d&#x27;un contenu graphique et sexuellement explicite.</h4>
+<h4>5.3 Nous respectons les exigences légales et réglementaires des juridictions où les annonces d&#x27;escortes sont interdites. En raison de ces restrictions légales locales, l&#x27;accès au site Web est donc illicite.</h4>
+<h3>6. Indemnisation pour utilisation non autorisée de matériels exclusifs</h3>
+<p>Vous acceptez d&#x27;être personnellement responsable et d&#x27;indemniser entièrement Micheline, ses successeurs et ayants droit pour tout dommage direct, indirect et/ou consécutif résultant de toute tentative ou réelle de téléchargement non autorisé ou de toute autre duplication de matériel à partir du site Web par vous seul, ou avec, ou sous l&#x27;autorité de toute autre personne, y compris, sans limitation, de toute agence gouvernementale.</p>
+<h3>7. Octroi limité de licence</h3>
+<p>Sous réserve de tous les termes et conditions énoncés dans les présentes, Micheline vous accorde par la présente une licence limitée, non exclusive et non transférable pour utiliser des photos, des textes, des hyperliens, des interliens, des moteurs de recherche et d&#x27;autres logiciels (« Matériaux ») associés avec une utilisation autorisée du site Web fournie par Micheline pendant la période pendant laquelle vous êtes un utilisateur actuel en règle.</p>
+<p>Vous ne pouvez utiliser les Matériaux que conformément aux présentes conditions générales d&#x27;utilisation. Vous ne pouvez à aucun moment supprimer les avis de propriété des Matériaux. Vous ne pouvez utiliser aucun Matériel non expressément autorisé dans les présentes ou sans autorisation écrite expresse préalable d&#x27;Micheline.</p>
+<p>Les utilisations interdites comprennent, sans s&#x27;y limiter :</p>
+<h3>1. permettre à d&#x27;autres personnes d&#x27;utiliser directement ou indirectement les éléments ;</h3>
+<h3>2. modifier, traduire, procéder à l&#x27;ingénierie inverse, décompiler ou désassembler les Documents, sauf dans la mesure où les lois applicables interdisent spécifiquement une telle restriction ;</h3>
+<h3>3. faire des copies ou créer des œuvres dérivées basées sur les matériaux, sauf dans les cas prévus aux présentes ;</h3>
+<h3>4. la location, le crédit-bail ou le transfert de tout droit sur les Matériels ;</h3>
+<h3>5. supprimer tous les avis de propriété, y compris les avis de droit d&#x27;auteur et de marque, ou les étiquettes sur les Documents ;</h3>
+<h3>6. faire toute autre utilisation des Matériaux non spécifiquement autorisée par Micheline.</h3>
+<p>Cette licence ne vous accorde aucun droit sur les améliorations ou mises à jour logicielles de quelque nature que ce soit.</p>
+<h3>8. Droits de propriété sur le contenu</h3>
+<p>À l&#x27;exception du matériel du domaine public ou du matériel autrement concédé sous licence ou autorisé pour une utilisation par Micheline à des fins de diffusion électronique, tous les documents affichés ou autrement disponibles via le site Web sont exclusifs et ne peuvent pas être copiés, redistribués ou téléchargés, en tout ou en partie, sans l&#x27;autorisation écrite préalable d&#x27;Micheline.</p>
+<p>Tous les éléments du site Web, ainsi que tous les documents et autres éléments utilisés directement ou indirectement dans, sur, par, via et/ou avec le site Web, sont protégés par les lois applicables sur le droit d&#x27;auteur, les traités internationaux sur le droit d&#x27;auteur et d&#x27;autres lois et réglementations applicables.</p>
+<p>Tous les droits sont réservés.</p>
+<p>Tous les droits de propriété intellectuelle et autres droits relatifs aux matériaux et autres éléments du site Web resteront toujours la propriété d&#x27;Micheline, de ses éventuels titulaires de licence et ayants droit.</p>
+<p>La licence limitée et non exclusive qui vous est accordée dans les présentes ne vous accorde aucun droit d&#x27;utiliser ce contenu, sauf dans les cas énoncés dans les présentes.</p>
+<p>Cette licence prendra immédiatement fin automatiquement si vous ne respectez pas les limitations décrites ici, violez toute autre disposition du présent accord, cessez, pour quelque raison que ce soit, d&#x27;être un utilisateur en règle, ou êtes informé de sa résiliation par Micheline ou ses agents autorisés.</p>
+<p>Vous acceptez qu&#x27;en cas de résiliation, vous détruirez immédiatement toutes les copies des documents en votre possession.</p>
+<h3>9. Limitations de la responsabilité</h3>
+<h4>9.1 Vous reconnaissez et acceptez qu&#x27;Micheline ne sera en aucun cas tenue responsable du résultat de tout contact ou réunion, que ce soit en personne, par téléphone ou par tout autre moyen, résultant de publicités placées ou auxquelles il a été répondu, ou de messages ou communications envoyés ou reçus par les Utilisateurs ou les Annonceurs via le site Web, ou par toute utilisation, directement ou indirectement, du site Web.</h4>
+<p>Vous êtes censé faire preuve de bon sens et prendre les mesures et précautions appropriées pour assurer votre propre sécurité et confidentialité dans le cas où vous choisissez de communiquer ou de rencontrer toute personne avec laquelle vous avez communiqué via l&#x27;utilisation des espaces publics ou des zones de discussion du site Web, ou via des publicités publiées sur le site Web.</p>
+<h4>9.2 Vous acceptez que les Matériaux et tous les autres services qui vous sont fournis par Micheline sont fournis « TELS QUELS », sans garantie d&#x27;aucune sorte, y compris, sans limitation, les garanties de qualité marchande, d&#x27;adéquation à un usage particulier et de non-contrefaçon.</h4>
+<p>L&#x27;intégralité du risque quant à la qualité et à la performance des Matériels et de tous les services fournis par Micheline est à votre charge.</p>
+<h4>9.3 Toute responsabilité d&#x27;Micheline, y compris, sans limitation, tout échec de performance, erreur, omission, interruption, suppression, défaut, retard de fonctionnement ou de transmission, panne de ligne de communication, vol ou destruction ou accès non autorisé, modification ou utilisation des enregistrements, que ce soit pour rupture de contrat, comportement délictueux, négligence ou pour toute autre cause ou action, sera strictement limitée dans la mesure permise par la loi applicable.</h4>
+<h4>9.4 Micheline n&#x27;est pas responsable des dommages résultant de la diffusion, de l&#x27;omission de diffuser ou de la diffusion incorrecte ou inexacte de tout matériel, donnée, publicité ou autre communication sur ou via le site Web.</h4>
+<h4>9.5 Aucune garantie n&#x27;est donnée par Micheline concernant les informations, services, matériels ou produits fournis via ou en relation avec le site Web, et Micheline décline expressément par la présente toute garantie, y compris, sans s&#x27;y limiter :</h4>
+<h3>1. toute garantie quant à la disponibilité, l&#x27;exactitude ou le contenu des Matériaux, informations, produits ou services ;</h3>
+<h3>2. toute garantie de qualité marchande ou d&#x27;adéquation à un usage particulier.</h3>
+<h4>9.6 Vous reconnaissez que l&#x27;utilisation du site Web se fait à vos propres risques. Nous ne représentons ni n&#x27;approuvons l&#x27;exactitude et la fiabilité de tout conseil, opinion, déclaration ou autre information affichée, téléchargée ou distribuée via le site Web ou par un utilisateur du site Web ou toute autre personne ou entité.</h4>
+<h3>10. Avis de non-responsabilité concernant le contenu tiers / limitation de responsabilité</h3>
+<h4>10.1 Vous reconnaissez que vous comprenez qu&#x27;Micheline n&#x27;est pas responsable, ni ne peut contrôler, l&#x27;utilisation par des tiers de toute information que vous leur fournissez via le site Web, ou autrement, et que vous avez été informé que vous devez faire preuve de prudence dans la sélection des informations personnelles que vous fournissez à des tiers via le site Web.</h4>
+<h4>10.2 Vous reconnaissez que vous comprenez qu&#x27;Micheline ne peut garantir, et ne fait aucune déclaration ou garantie, concernant la sécurité ou la confidentialité des informations que vous fournissez volontairement via Internet et vos messages électroniques, et que vous dégagez Micheline de toute responsabilité en relation avec l&#x27;utilisation ou la mauvaise utilisation de ces informations par d&#x27;autres parties.</h4>
+<h4>10.3 Vous reconnaissez en outre que vous comprenez qu&#x27;Micheline ne contrôle pas le contenu des informations, messages, communications ou autres documents publiés ou téléchargés par les utilisateurs du site Web, y compris, sans s&#x27;y limiter, tous les annonceurs.</h4>
+<h4>10.4 Vous reconnaissez en outre que vous comprenez qu&#x27;Micheline ne garantit pas l&#x27;exactitude ou la véracité des messages, communications, informations ou contenus de quelque nature que ce soit qui ont été publiés, téléchargés ou fournis par d&#x27;autres utilisateurs du site Web, y compris, sans s&#x27;y limiter, tous les Annonceurs.</h4>
+<h4>10.5 Vous reconnaissez en outre que vous comprenez que l&#x27;utilisation des informations, communications et contenus fournis par des tiers relève de votre propre responsabilité.</h4>
+<h3>11. Utilisation inappropriée du chat ou des espaces publics</h3>
+<p>Si le site Web permet aux utilisateurs de partager des informations avec d&#x27;autres utilisateurs via l&#x27;utilisation de salons de discussion, d&#x27;espaces publics ou d&#x27;autres moyens de communication entre utilisateurs, vous acceptez et garantissez que vous ne soumettrez, publierez ou n&#x27;afficherez sur le site Web aucun matériel qui enfreint, est diffamatoire, calomnieux ou autrement en violation de toute loi fédérale, étatique ou locale ou politique du site Web, ou tout matériel jugé obscène, violent, harcelant ou autrement répréhensible.</p>
+<p>Vous n&#x27;utiliserez pas non plus le site Web pour solliciter ou promouvoir des services illégaux.</p>
+<h4>11.1 Bien qu&#x27;Micheline n&#x27;assume pas le devoir ou l&#x27;obligation de surveiller tout message ou autre matériel publié ou téléchargé sur le site Web par des tiers, y compris vous, nous nous réservons le droit, mais non l&#x27;obligation, de surveiller tout matériel publié ou téléchargé sur le site Web par des tiers, y compris vous, à tout moment et sans préavis pour garantir qu&#x27;ils sont conformes aux directives ou politiques de contenu du site Web.</h4>
+<h4>11.2 Nous nous réservons le droit, à notre seule et entière discrétion, mais ne sommes pas obligés, de supprimer ou déplacer, sans préavis, les publicités et publications publiques que nous considérons comme violant le code de conduite du site Web ou toute directive de contenu applicable.</h4>
+<h4>11.3 Vous reconnaissez et acceptez que vous resterez seul responsable du contenu des messages et autres éléments que vous pouvez télécharger sur le site Web ou communiquer aux utilisateurs du site Web et qu&#x27;Micheline peut, à sa seule discrétion, résilier ou suspendre votre accès à tout ou partie du site Web à tout moment, avec ou sans préavis, pour quelque raison que ce soit, y compris, sans s&#x27;y limiter, la violation du présent accord.</h4>
+<h4>11.4 Vous reconnaissez et acceptez que vous êtes seul responsable de toute information que vous envoyez, affichez ou recevez via le site Web, même si une réclamation devait survenir après la résiliation du service.</h4>
+<h3>12. Communications dans les salons de discussion ou dans les espaces publics non privés</h3>
+<p>Vous reconnaissez et acceptez en outre que tous les messages ou contenus publiés par vous ou par d&#x27;autres dans les salons de discussion ou les espaces publics pouvant être fournis sur le site Web seront considérés comme facilement accessibles au public et ne doivent par conséquent pas être considérés comme privés ou confidentiels.</p>
+<p>Par conséquent, vous ne devez pas utiliser le site Web pour toute communication que vous souhaitez uniquement lire par vous et le(s) destinataire(s) prévu(s).</p>
+<p>Avis est par la présente donné que tous les messages saisis sur le site Web peuvent être lus par les opérateurs du site, qu&#x27;ils soient ou non le(s) destinataire(s) prévu(s).</p>
+<h3>13. Marque déposée et marque de service</h3>
+<p>Toute marque, dénomination commerciale, logo ou autre élément distinctif associé au site Web demeure soumis aux droits de propriété intellectuelle applicables. Aucune utilisation non autorisée de ces éléments ne sera permise sans l&#x27;autorisation préalable de leur titulaire.</p>
+<h3>14. Utilisation privée des matériaux</h3>
+<p>Tous les éléments inclus sur le site Web sont réservés à l&#x27;usage privé des utilisateurs autorisés. Aucune autre utilisation n&#x27;est prévue par Micheline et toute autre utilisation est strictement interdite par Micheline et constituera une violation de sa licence limitée et de son autorisation d&#x27;utilisation.</p>
+<h3>15. Divulgation et autres communications</h3>
+<p>Nous nous réservons le droit de vous envoyer un courrier électronique, lorsque cela est nécessaire, dans le but de vous informer des modifications ou des ajouts apportés au site Web, ou de nos produits et services associés.</p>
+<p>Nous nous réservons le droit de divulguer des informations sur votre utilisation du site Web et des données démographiques sous des formes qui ne révèlent pas votre identité personnelle.</p>
+<p>Nous ne collectons, ne vendons, n’échangeons ni ne divulguons aucune information personnelle de quelque manière que ce soit, sous réserve des obligations légales applicables.</p>
+<p>Notre site peut installer des cookies sur votre ordinateur pour faciliter votre navigation sur notre site. Ces cookies ne sont jamais utilisés à d&#x27;autres fins.</p>
+<p>Notre site peut contenir des liens vers d&#x27;autres sites. Nous ne sommes pas responsables des pratiques de confidentialité, du contenu ou de la licéité des sites liés.</p>
+<h3>16. Votre consentement à recevoir des communications par courrier électronique</h3>
+<p>Par la présente, vous nous accordez le droit, de temps à autre, à notre discrétion, de vous envoyer des courriels commerciaux, publicitaires ou informatifs à votre adresse électronique lorsque vous avez fourni cette adresse et lorsque cela est permis par la réglementation applicable.</p>
+<p>Vous reconnaissez que nous pouvons compter sur votre consultation des sites Web comme votre autorisation pour vous envoyer de tels e-mails dans les conditions permises par la loi.</p>
+<p>Vous pouvez demander l&#x27;arrêt des communications commerciales conformément aux mécanismes prévus à cet effet.</p>
+<h3>17. Responsabilité des utilisateurs pour les informations qu&#x27;ils publient</h3>
+<p>Micheline peut, à sa discrétion, fournir un service permettant aux utilisateurs autorisés de communiquer ou de partager des informations avec d&#x27;autres utilisateurs ou des personnes proposant de fournir tout type de service aux utilisateurs, ou de publier des informations sur, dans ou sur le site Web.</p>
+<p>Si Micheline fournit un tel service et si vous utilisez le service, vous acceptez de ne pas publier, soumettre, publier, afficher, diffuser ou communiquer de toute autre manière tout matériel diffamatoire, inexact, abusif, menaçant, offensant, frauduleux ou illégal ou tout matériel qui violerait ou enfreindrait le droit d&#x27;auteur, la marque déposée, les droits de publicité, les droits à la vie privée ou d&#x27;autres droits de toute personne.</p>
+<h4>17.1 Vous reconnaissez et acceptez que vous, et non Micheline, serez seul responsable de tous les dommages, responsabilités ou autres conséquences, prévus ou imprévus, de toutes les informations que vous soumettez, publiez, affichez, diffusez ou communiquez de toute autre manière via le site Web.</h4>
+<h4>17.2 Si Micheline fournit l&#x27;un des services décrits dans les présentes, vous acceptez que tous les messages et autres communications de votre part puissent être accessibles aux utilisateurs autorisés à accéder au site Web et acceptez que tous ces messages et autres communications ne soient pas considérés comme privés ou sécurisés.</h4>
+<h3>18. Avis à l&#x27;entreprise ou aux utilisateurs</h3>
+<p>Les notifications du site Web aux utilisateurs autorisés peuvent être transmises au moyen de messages électroniques ou par publication générale sur le site Web.</p>
+<p>Les communications de votre part à Micheline peuvent être effectuées par les moyens de contact mis à disposition sur le site Web, sauf indication contraire dans l&#x27;accord.</p>
+<h4>18.1 Toutes les questions, plaintes et avis adressés à Micheline doivent être effectués par les moyens de contact indiqués sur le site Web.</h4>
+<h3>19. Intégralité de l&#x27;accord</h3>
+<p>Cet accord contient l&#x27;intégralité de l&#x27;accord entre l&#x27;utilisateur autorisé et Micheline concernant l&#x27;utilisation du site Web et tous les éléments directement et indirectement liés à ceux-ci.</p>
+<p>Le présent Accord remplace tous les accords, écrits et représentations écrits et oraux antérieurs et ne peut être modifié que sur préavis d&#x27;Micheline, sous réserve des dispositions légales applicables.</p>
+<h4>19.1 Vous reconnaissez et acceptez que les termes et conditions du présent Accord sont susceptibles d&#x27;être modifiés par Micheline à tout moment et entreront en vigueur après notification aux utilisateurs par publication sur ou via un lien hypertexte vers le site Web.</h4>
+<h3>20. Remboursement et annulation</h3>
+<p>Le Client peut demander un remboursement complet dans les 48 heures suivant l&#x27;achat de la publicité. Passé ce délai, aucun remboursement ne sera effectué.</p>
+<h4>20.1 Sont éligibles à l&#x27;annulation et au remboursement les transactions et achats effectués au cours des 48 dernières heures et pour lesquels le Service (liste en ligne) n&#x27;a pas encore démarré ou activé.</h4>
+<p>Nous vous rembourserons au plus tard 14 jours ouvrables à compter du jour où nous recevons les services annulés éligibles. Nous utiliserons le même moyen de paiement que celui que vous avez utilisé pour la commande, et vous n&#x27;encourrez aucun frais pour ce remboursement.</p>
+<p>Nous nous réservons le droit de refuser les annulations qui ne répondent pas aux conditions d&#x27;annulation ci-dessus à notre seule discrétion, sous réserve des droits impératifs prévus par la législation applicable.</p>
+<h3>21. Lieu et juridiction</h3>
+<p>Les parties conviennent que le présent accord sera régi et interprété conformément aux lois applicables au site et à l&#x27;activité d&#x27;Micheline.</p>
+<p>En cas de différend entre les parties découlant du présent accord ou autrement lié à celui-ci, les parties se rencontreront et négocieront de bonne foi pour tenter de résoudre le différend.</p>
+<p>Si les parties ne parviennent pas à résoudre le différend par des négociations directes ou informelles, le différend pourra être soumis à la juridiction compétente conformément aux règles de droit applicables.</p>
+<h3>22. Inapplicabilité des dispositions</h3>
+<p>Si une disposition du présent Accord est jugée inapplicable pour quelque raison que ce soit, cette disposition ne sera réformée que dans la mesure nécessaire pour la rendre exécutoire. Sauf indication contraire explicite, les dispositions du présent accord survivront.</p><hr class="legal-divider"><h3>POLITIQUE DE CONFIDENTIALITÉ</h3>
+<p>Notre engagement de confidentialité</p>
+<p>Votre vie privée est importante pour nous. Pour mieux protéger votre vie privée, nous fournissons cette notification expliquant nos pratiques d&#x27;information en ligne et les choix que vous pouvez faire sur la façon dont vos informations sont collectées et utilisées.</p>
+<p>Pour rendre cet avis facile à trouver, nous le rendons disponible sur notre site et à chaque point où des informations personnellement identifiables peuvent être demandées.</p>
+<p>L&#x27;information que nous recueillons</p>
+<p>Le présent avis vise toutes les informations collectées ou soumises sur ce site.</p>
+<p>Sur certaines pages, vous pouvez commander des produits ou des abonnements, faire des demandes et vous inscrire pour recevoir du matériel.</p>
+<p>Les types de renseignements personnels recueillis sur ces pages sont notamment :</p>
+<p class="legal-list">• Nom et prénom</p>
+<p class="legal-list">• Nom d&#x27;utilisateur</p>
+<p class="legal-list">• Adresse e-mail</p>
+<h3>NOTRE ENGAGEMENT POUR LA SÉCURITÉ DES DONNÉES</h3>
+<p>Pour éviter tout accès non autorisé, maintenir l&#x27;exactitude des données et assurer l&#x27;utilisation correcte des informations, Micheline a mis en place des procédures physiques, électroniques et de gestion appropriées pour protéger et sécuriser les informations que nous recueillons en ligne.</p>
+<h3>COMMENT VOUS POUVEZ ACCÉDER OU CORRIGER VOS RENSEIGNEMENTS</h3>
+<p>Vous pouvez accéder à vos informations personnellement identifiables que nous recueillons en ligne et maintenons dans notre base de données.</p>
+<p>Nous utilisons cette procédure pour mieux protéger vos informations.</p>
+<p>Pour protéger votre vie privée et votre sécurité, nous prendrons également des mesures raisonnables pour vérifier votre identité avant d&#x27;accorder l&#x27;accès à vos informations ou d&#x27;effectuer des corrections.</p>
+<h3>LA FAÇON DONT NOUS UTILISONS LES INFORMATIONS</h3>
+<p>Nous utilisons les informations collectées pour la protection de l&#x27;accès à notre système, notamment :</p>
+<p class="legal-list">• Nom d&#x27;utilisateur</p>
+<p class="legal-list">• Mot de passe</p>
+<p class="legal-list">• Vérification de l&#x27;utilisateur</p>
+<p class="legal-list">• Adresse e-mail</p>
+<p>Les informations collectées sont utilisées uniquement dans le cadre des fonctionnalités et services proposés par le site, sous réserve des obligations légales applicables.</p>
+<h3>COMMENT NOUS CONTACTER</h3>
+<p>Si vous avez d&#x27;autres questions ou des préoccupations au sujet de cette politique de confidentialité, vous pouvez nous contacter par l&#x27;intermédiaire des moyens de contact disponibles sur le site.</p>
+<p>Aucune adresse e-mail professionnelle n&#x27;est indiquée dans la présente politique.</p><hr class="legal-divider"><p>Moyens de paiement acceptés pour les prestations : PayPal, Transcash, Wero, PCS et Neosurf Card.<br>
+Remise en main propre pour le premier rendez-vous. Paiement en espèces accepté dès le deuxième rendez-vous.</p>
+<p>Contacter le Webmaster | Se connecter | Termes et Conditions | Politique de confidentialité | Dispute and Abuse | Changer de vue classique</p>
+<p>© 2026 Micheline — Tous droits réservés.</p>
+<p>STOP HUMAN TRAFFICKING</p>
+<p>Nous luttons contre la traite des êtres humains et les abus sur mineurs. Si vous êtes victime ou si vous connaissez quelqu&#x27;un qui a besoin d&#x27;aide, veuillez nous le signaler et contacter les organismes d&#x27;aide officiels.</p>
+<p>Ressources d&#x27;aide :</p>
+<p class="legal-list">• renate-europe.net</p>
+<p class="legal-list">• stopthetraffik.org</p></div></div>
+<div id="lightbox" aria-hidden="true"><button id="lightboxClose" aria-label="Fermer">×</button><img id="lightboxImg" alt=""></div><div id="toast" aria-live="polite"></div>
+<script>
+'use strict';
+const SIGNAL='Coucou.08', TELEGUARD='SL327SBV7';
+const translations={
+'fr-FR':{aboutAge:'26 ans',aboutHeight:'1m68',namePlaceholder:'Votre nom',emailPlaceholder:'adresse@exemple.com',messagePlaceholder:'Votre message…',mailOpening:'Ouverture de votre messagerie…',mailSubject:'Demande de contact - {name}',mailName:'Nom',mailEmail:'Email',mailPhone:'Téléphone',mailDate:'Date souhaitée',mailDuration:'Durée',mailMessage:'Message',mailNotProvided:'Non renseigné',mailNoMessage:'Aucun message',galleryPrev:'Photos précédentes',galleryNext:'Photos suivantes',photoAlt:'photo',footerAge:'26 ans',copied:'✓ Copié',menuOpen:'Ouvrir le menu',menuClose:'Fermer le menu',exitTitle:'Accès fermé',exitText:'Ce site est réservé aux personnes majeures.',home:'Accueil',services:'Prestations',prices:'Tarifs',gallery:'Galerie',contact:'Contact',cta:'Prendre contact',servicesTitle:'Prestations',s1t:'Massages',s1a:'Relaxant',s1b:'Californien',s1c:'Prostate',s1d:'Tantrique',s2t:'Jeux sensuels',s2a:'Strip-tease',s2b:'Caresses',s2c:'French kiss',s2d:'Facesitting',s2e:'Footjob',s3t:'Préliminaires & rapports',s3a:'Cunnilingus',s3b:'Branlette espagnole',s3c:'Fellation nature',s3d:'Fellation protégée',s3e:'Gorge profonde',s3f:'Rapport protégé',s3g:'Toutes positions Kamasutra',s4t:'',s4a:' douce (sur demande)',s4b:'Safe word systématique',s5t:'Sexcam',s5a:'Show en direct',s5b:'Cam à cam',s5c:'Jouets interactifs',s5d:'Scénarios sur mesure',s6t:'',s6a:'Photos intimes',s6b:'Vidéos personnalisées',s6c:'Pack sur demande',s7t:'',s7a:'Urophilie (donneuse) — uniquement sur demande et consentement éclairé',s8t:'',s8a:'Douche avant / après',s8b:'Serviettes propres et peignoir',s8c:'Boisson offerte',pricesTitle:'Tarifs',p30:'30 minutes',p1:'1 heure',p2:'2 heures',p3:'3 heures',pn:'Nuit (22h–8h)',galleryTitle:'Galerie',loading:'Chargement…',aboutTitle:'À propos',factAdult:'Accès réservé aux majeurs',contactTitle:'Prendre contact',name:'Nom / Prénom',email:'Email',phone:'Téléphone',date:'Date & heure souhaitée',duration:'Durée',night:'Nuit',message:'Message',ageCheck:"Je confirme avoir plus de 26 ans et avoir lu les informations légales et de confidentialité.",send:'Préparer la demande',copy:'Copier',legal:'Mentions légales & confidentialité',hosted:'Hébergé en France (OVH)',legalTitle:'Mentions légales & confidentialité',publisher:'Éditeur / responsable du traitement',legalInfo:"Les informations d’identification et de contact publiées sur cette page correspondent aux informations communiquées pour ce site.",hosting:'Hébergeur',dataTitle:'Données personnelles',dataText:"Le formulaire de cette version utilise une fenêtre mailto: et ne transmet pas les données à un serveur du site. Si un véritable formulaire serveur est ajouté, il faudra définir une base légale, les finalités, les destinataires, une durée de conservation et les droits applicables.",cookiesTitle:'Cookies et traceurs',cookiesText:"Cette version n'intègre pas de publicité ni d'outil d'analyse tiers. La préférence de majorité est stockée dans localStorage, qui est une fonctionnalité technique du navigateur.",legalAttention:'Important :',legalWarning:"les mentions légales et obligations professionnelles peuvent varier selon le pays, le lieu d'exercice et le statut. Pour une mise en ligne commerciale en France, Belgique, Italie ou Allemagne, faites valider les informations d'identité, fiscales et réglementaires par un professionnel local. Pour l'Allemagne notamment, la réglementation sur la prostitution encadre l'offre et la publicité.",ageText:'Ce site est réservé à un public majeur. Confirmez votre âge pour continuer.',ageYes:"J'ai plus de 26 ans",ageNo:'Je quitte',ageSmall:"L'accès au site ne vaut pas consentement à une prestation et les conditions applicables doivent être respectées."},
+'fr-BE':{aboutAge:'26 ans',aboutHeight:'1m68',namePlaceholder:'Votre nom',emailPlaceholder:'adresse@exemple.com',messagePlaceholder:'Votre message…',mailOpening:'Ouverture de votre messagerie…',mailSubject:'Demande de contact - {name}',mailName:'Nom',mailEmail:'Email',mailPhone:'Téléphone',mailDate:'Date souhaitée',mailDuration:'Durée',mailMessage:'Message',mailNotProvided:'Non renseigné',mailNoMessage:'Aucun message',galleryPrev:'Photos précédentes',galleryNext:'Photos suivantes',photoAlt:'photo',footerAge:'26 ans',home:'Accueil',services:'Prestations',prices:'Tarifs',gallery:'Galerie',contact:'Contact',cta:'Prendre contact',servicesTitle:'Prestations',s1t:'Massages',s1a:'Relaxant',s1b:'Californien',s1c:'Prostate',s1d:'Tantrique',s2t:'Jeux sensuels',s2a:'Strip-tease',s2b:'Caresses',s2c:'French kiss',s2d:'Facesitting',s2e:'Footjob',s3t:'Préliminaires & rapports',s3a:'Cunnilingus',s3b:'Branlette espagnole',s3c:'Fellation nature',s3d:'Fellation protégée',s3e:'Gorge profonde',s3f:'Rapport protégé',s3g:'Toutes positions Kamasutra',s4t:'',s4a:' douce (sur demande)',s4b:'Safe word systématique',s5t:'Sexcam',s5a:'Show en direct',s5b:'Cam à cam',s5c:'Jouets interactifs',s5d:'Scénarios sur mesure',s6t:'',s6a:'Photos intimes',s6b:'Vidéos personnalisées',s6c:'Pack sur demande',s7t:'',s7a:'Urophilie (donneuse) — uniquement sur demande et consentement éclairé',s8t:'',s8a:'Douche avant / après',s8b:'Serviettes propres et peignoir',s8c:'Boisson offerte',pricesTitle:'Tarifs',p30:'30 minutes',p1:'1 heure',p2:'2 heures',p3:'3 heures',pn:'Nuit (22h–8h)',galleryTitle:'Galerie',loading:'Chargement…',aboutTitle:'À propos',factAdult:'Accès réservé aux majeurs',contactTitle:'Prendre contact',name:'Nom / Prénom',email:'Email',phone:'Téléphone',date:'Date & heure souhaitée',duration:'Durée',night:'Nuit',message:'Message',ageCheck:"Je confirme avoir plus de 26 ans et avoir lu les informations légales et de confidentialité.",send:'Préparer la demande',copy:'Copier',legal:'Mentions légales & confidentialité',hosted:'Hébergé en France (OVH)',legalTitle:'Mentions légales & confidentialité',publisher:'Éditeur / responsable du traitement',legalInfo:"Les informations d’identification et de contact publiées sur cette page correspondent aux informations communiquées pour ce site.",hosting:'Hébergeur',dataTitle:'Données personnelles',dataText:"Le formulaire de cette version utilise une fenêtre mailto: et ne transmet pas les données à un serveur du site. Si un véritable formulaire serveur est ajouté, il faudra définir une base légale, les finalités, les destinataires, une durée de conservation et les droits applicables.",cookiesTitle:'Cookies et traceurs',cookiesText:"Cette version n'intègre pas de publicité ni d'outil d'analyse tiers. La préférence de majorité est stockée dans localStorage, qui est une fonctionnalité technique du navigateur.",legalAttention:'Important :',legalWarning:"les obligations peuvent varier selon la Belgique, la France, l'Italie ou l'Allemagne et selon le lieu d'exercice. Faites valider les informations juridiques et professionnelles avant publication.",ageText:'Ce site est réservé à un public majeur. Confirmez votre âge pour continuer.',ageYes:"J'ai plus de 26 ans",ageNo:'Je quitte',ageSmall:"L'accès au site ne vaut pas consentement à une prestation et les conditions applicables doivent être respectées."},
+'it-IT':{aboutAge:'26 anni',aboutHeight:'1m68',namePlaceholder:'Il tuo nome',emailPlaceholder:'indirizzo@esempio.com',messagePlaceholder:'Il tuo messaggio…',mailOpening:'Apertura della posta…',mailSubject:'Richiesta di contatto - {name}',mailName:'Nome',mailEmail:'Email',mailPhone:'Telefono',mailDate:'Data desiderata',mailDuration:'Durata',mailMessage:'Messaggio',mailNotProvided:'Non indicato',mailNoMessage:'Nessun messaggio',galleryPrev:'Foto precedenti',galleryNext:'Foto successive',photoAlt:'foto',footerAge:'26 anni',copied:'✓ Copiato',menuOpen:'Apri il menu',menuClose:'Chiudi il menu',exitTitle:'Accesso chiuso',exitText:'Questo sito è riservato alle persone maggiorenni.',home:'Home',services:'Servizi',prices:'Tariffe',gallery:'Galleria',contact:'Contatti',cta:'Contatti',servicesTitle:'Servizi',s1t:'Massaggi',s1a:'Rilassante',s1b:'Californiano',s1c:'Prostatico',s1d:'Tantrico',s2t:'Giochi sensuali',s2a:'Spogliarello',s2b:'Carezze',s2c:'Bacio alla francese',s2d:'Facesitting',s2e:'Footjob',s3t:'Preliminari e rapporti',s3a:'Cunnilingus',s3b:'Branlette espagnole',s3c:'Fellatio naturale',s3d:'Fellatio protetta',s3e:'Deep throat',s3f:'Rapporto protetto',s3g:'Posizioni del Kamasutra',s4t:'',s4a:' dolce (su richiesta)',s4b:'Safe word sempre prevista',s5t:'Sexcam',s5a:'Show dal vivo',s5b:'Cam to cam',s5c:'Giocattoli interattivi',s5d:'Scenari personalizzati',s6t:'',s6a:'Foto intime',s6b:'Video personalizzati',s6c:'Pack su richiesta',s7t:'',s7a:'Urofilia (donatrice) — solo su richiesta e con consenso informato',s8t:'Comfort',s8a:'Doccia prima / dopo',s8b:'Asciugamani puliti e accappatoio',s8c:'Bevanda offerta',pricesTitle:'Tariffe',p30:'30 minuti',p1:'1 ora',p2:'2 ore',p3:'3 ore',pn:'Notte (22:00–08:00)',galleryTitle:'Galleria',loading:'Caricamento…',aboutTitle:'Chi sono',factAdult:'Accesso riservato ai maggiorenni',contactTitle:'Contatti',name:'Nome / Cognome',email:'Email',phone:'Telefono',date:'Data e ora desiderate',duration:'Durata',night:'Notte',message:'Messaggio',ageCheck:'Confermo di avere più di 26 anni e di aver letto le informazioni legali e sulla privacy.',send:'Prepara la richiesta',copy:'Copia',legal:'Note legali e privacy',hosted:'Ospitato in Francia (OVH)',legalTitle:'Note legali e privacy',publisher:'Editore / titolare del trattamento',legalInfo:'Le informazioni di identificazione e contatto pubblicate su questa pagina sono quelle comunicate per questo sito. Gli obblighi legali possono dipendere dal paese e dal luogo di attività.',hosting:'Hosting',dataTitle:'Dati personali',dataText:'Questa versione usa mailto: e non invia i dati a un server del sito. Se verrà aggiunto un modulo server, dovranno essere definiti base giuridica, finalità, destinatari, conservazione e diritti applicabili.',cookiesTitle:'Cookie e tracker',cookiesText:'Questa versione non integra pubblicità o strumenti di analisi di terze parti. La preferenza di maggiore età viene salvata in localStorage.',legalAttention:'Importante:',legalWarning:'gli obblighi legali e professionali possono variare tra Italia, Francia, Belgio e Germania e in base al luogo di esercizio. Le informazioni devono essere verificate localmente prima della pubblicazione.',ageText:'Questo sito è riservato a un pubblico adulto. Conferma la tua età per continuare.',ageYes:'Ho più di 26 anni',ageNo:'Esci',ageSmall:'L’accesso al sito non costituisce consenso a una prestazione e devono essere rispettate le condizioni applicabili.'},
+'de-DE':{aboutAge:'26 Jahre',aboutHeight:'1,68 m',namePlaceholder:'Ihr Name',emailPlaceholder:'adresse@beispiel.de',messagePlaceholder:'Ihre Nachricht…',mailOpening:'E-Mail-Programm wird geöffnet…',mailSubject:'Kontaktanfrage - {name}',mailName:'Name',mailEmail:'E-Mail',mailPhone:'Telefon',mailDate:'Gewünschtes Datum',mailDuration:'Dauer',mailMessage:'Nachricht',mailNotProvided:'Nicht angegeben',mailNoMessage:'Keine Nachricht',galleryPrev:'Vorherige Fotos',galleryNext:'Nächste Fotos',photoAlt:'Foto',footerAge:'26 Jahre',copied:'✓ Kopiert',menuOpen:'Menü öffnen',menuClose:'Menü schließen',exitTitle:'Zugang geschlossen',exitText:'Diese Website ist nur für Erwachsene bestimmt.',home:'Startseite',services:'Leistungen',prices:'Preise',gallery:'Galerie',contact:'Kontakt',cta:'Kontakt aufnehmen',servicesTitle:'Leistungen',s1t:'Massagen',s1a:'Entspannend',s1b:'Kalifornisch',s1c:'Prostata',s1d:'Tantrisch',s2t:'Sinnliche Spiele',s2a:'Striptease',s2b:'Streicheln',s2c:'Französischer Kuss',s2d:'Facesitting',s2e:'Footjob',s3t:'Vorspiel & Geschlechtsverkehr',s3a:'Cunnilingus',s3b:'Spanische Masturbation',s3c:'Fellatio ohne Kondom',s3d:'Geschützte Fellatio',s3e:'Deep Throat',s3f:'Geschützter Geschlechtsverkehr',s3g:'Kamasutra-Positionen',s4t:'',s4a:'Sanfte  (auf Anfrage)',s4b:'Safe Word systematisch',s5t:'Sexcam',s5a:'Live-Show',s5b:'Cam-to-Cam',s5c:'Interaktives Spielzeug',s5d:'Individuelle Szenarien',s6t:'',s6a:'Intime Fotos',s6b:'Personalisierte Videos',s6c:'Pakete auf Anfrage',s7t:'',s7a:'Urophilie (Geberin) — nur auf Anfrage und mit aufgeklärter Zustimmung',s8t:'',s8a:'Dusche vor / nachher',s8b:'Saubere Handtücher und Bademantel',s8c:'Getränk inklusive',pricesTitle:'Preise',p30:'30 Minuten',p1:'1 Stunde',p2:'2 Stunden',p3:'3 Stunden',pn:'Nacht (22:00–08:00)',galleryTitle:'Galerie',loading:'Laden…',aboutTitle:'Über mich',factAdult:'Zugang nur für Erwachsene',contactTitle:'Kontakt',name:'Vor- und Nachname',email:'E-Mail',phone:'Telefon',date:'Gewünschtes Datum & Uhrzeit',duration:'Dauer',night:'Nacht',message:'Nachricht',ageCheck:'Ich bestätige, über 26 zu sein und die rechtlichen Hinweise und Datenschutzinformationen gelesen zu haben.',send:'Anfrage vorbereiten',copy:'Kopieren',legal:'Impressum & Datenschutz',hosted:'Gehostet in Frankreich (OVH)',legalTitle:'Impressum & Datenschutz',publisher:'Anbieter / Verantwortlicher',legalInfo:'Die auf dieser Seite veröffentlichten Identifikations- und Kontaktdaten entsprechen den für diese Website bereitgestellten Angaben. Rechtliche Pflichten können vom Land und vom Ort der Tätigkeit abhängen.',hosting:'Hosting',dataTitle:'Personenbezogene Daten',dataText:'Diese Version nutzt mailto: und übermittelt Daten nicht an einen Server der Website. Bei einem Server-Formular müssen Rechtsgrundlage, Zweck, Empfänger, Speicherdauer und Betroffenenrechte festgelegt werden.',cookiesTitle:'Cookies und Tracker',cookiesText:'Diese Version enthält keine Werbung und keine Drittanbieter-Analyse. Die Altersbestätigung wird in localStorage des Browsers gespeichert.',legalAttention:'Wichtig:',legalWarning:'rechtliche und berufliche Pflichten können in Deutschland, Frankreich, Belgien und Italien sowie je nach Ort der Tätigkeit unterschiedlich sein. Vor der Veröffentlichung sollten die Angaben lokal geprüft werden. In Deutschland gelten insbesondere besondere Regeln für Angebot und Werbung sexueller Dienstleistungen.',ageText:'Diese Website ist nur für Erwachsene bestimmt. Bitte bestätige dein Alter, um fortzufahren.',ageYes:'Ich bin über 26',ageNo:'Verlassen',ageSmall:'Der Zugang zur Website stellt keine Zustimmung zu einer Leistung dar; die geltenden Bedingungen müssen eingehalten werden.'}
+};
+let locale=new URLSearchParams(location.search).get('lang')||localStorage.getItem('siteLang')||'fr-FR'; if(!translations[locale])locale='fr-FR';
+const language=document.getElementById('language'); language.value=locale;
+function applyLocale(){const t=translations[locale];document.documentElement.lang=locale.slice(0,2);document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(t[k]!==undefined)el.textContent=t[k]});document.querySelectorAll('[data-i18n-placeholder]').forEach(el=>{const k=el.dataset.i18nPlaceholder;if(t[k]!==undefined)el.placeholder=t[k]});document.querySelectorAll('[data-i18n-aria]').forEach(el=>{const k=el.dataset.i18nAria;if(t[k]!==undefined)el.setAttribute('aria-label',t[k])});document.title='Micheline';const og=document.querySelector('meta[property="og:locale"]');if(og)og.content=locale.replace('-', '_');try{localStorage.setItem('siteLang',locale)}catch(e){}}
+applyLocale(); language.addEventListener('change',()=>{locale=language.value;const u=new URL(location.href);u.searchParams.set('lang',locale);history.replaceState({},'',u);applyLocale();syncAssistantLocale(true);renderGallery();});
+const overlay=document.getElementById('age-overlay');
+
+function getAgeVerified(){
+  try{
+    if(localStorage.getItem('ageVerified')==='true') return true;
+  }catch(e){}
+  try{
+    return document.cookie.split('; ').some(v=>v==='ageVerified=true');
+  }catch(e){
+    return false;
+  }
+}
+
+function saveAgeVerified(){
+  try{localStorage.setItem('ageVerified','true')}catch(e){}
+  try{
+    document.cookie='ageVerified=true; max-age=31536000; path=/; SameSite=Lax';
+  }catch(e){}
+}
+
+if(getAgeVerified()){
+  overlay.classList.add('hidden');
+}else{
+  overlay.classList.remove('hidden');
+}
+
+document.getElementById('ageYes').addEventListener('click',()=>{
+  saveAgeVerified();
+  overlay.classList.add('hidden');
+});
+
+document.getElementById('ageNo').addEventListener('click',()=>{
+  const t=translations[locale]||translations['fr-FR'];
+  document.body.innerHTML=`<main style="min-height:100svh;display:grid;place-items:center;background:#080808;color:#777;font:16px Inter,sans-serif;text-align:center;padding:30px"><div><h1 style="color:#000000;font-family:Georgia,serif">${t.exitTitle}</h1><p>${t.exitText}</p></div></main>`;
+});
+const menu=document.getElementById('menu'),navLinks=document.getElementById('navLinks');function setMenu(open){navLinks.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?(translations[locale]||translations['fr-FR']).menuClose:(translations[locale]||translations['fr-FR']).menuOpen);menu.innerHTML=open?'<i class="fas fa-xmark"></i>':'<i class="fas fa-bars"></i>'}menu.addEventListener('click',()=>setMenu(!navLinks.classList.contains('open')));document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));document.addEventListener('click',e=>{if(window.innerWidth<=760&&navLinks.classList.contains('open')&&!e.target.closest('header'))setMenu(false)});
+const toast=document.getElementById('toast');let toastTimer;function showToast(m){toast.textContent=m;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+async function copyText(text){try{await navigator.clipboard.writeText(text);showToast((translations[locale]||translations['fr-FR']).copied)}catch(e){const i=document.createElement('input');i.value=text;document.body.appendChild(i);i.select();document.execCommand('copy');i.remove();showToast((translations[locale]||translations['fr-FR']).copied)}}document.querySelectorAll('[data-copy]').forEach(b=>b.onclick=()=>copyText(b.dataset.copy));document.getElementById('signalNav').onclick=()=>copyText(SIGNAL);
+/* gallery: root files, optimized loading */
+const grid=document.getElementById('galleryGrid'),
+      galleryPrev=document.getElementById('galleryPrev'),
+      galleryNext=document.getElementById('galleryNext'),
+      galleryPage=document.getElementById('galleryPage');
+
+/* Match the repository naming: 01.jpg…09.jpg, then 010.jpg…040.jpg. */
+const galleryFiles=Array.from({length:40},(_,i)=>{
+  const n=i+1;
+  return n<10 ? String(n).padStart(2,'0')+'.jpg' : String(n).padStart(3,'0')+'.jpg';
+});
+let galleryBatches=[],galleryIndex=0;
+
+function loadRootGallery(){
+  grid.innerHTML='';
+  galleryBatches=[];
+  galleryIndex=0;
+
+  for(let start=0;start<galleryFiles.length;start+=4){
+    const batch=document.createElement('div');
+    batch.className='gallery-batch';
+
+    galleryFiles.slice(start,start+4).forEach((u,j)=>{
+      const i=start+j;
+      const img=document.createElement('img');
+      img.className='gallery-item';
+      img.src='/'+u;
+      img.loading=(i<4?'eager':'lazy');
+      img.decoding='async';
+      if(i===0) img.fetchPriority='high';
+      img.alt=`Micheline — ${((translations[locale]||translations['fr-FR']).photoAlt||'photo')} ${String(i+1).padStart(2,'0')}`;
+      img.addEventListener('error',()=>{
+        /* Compatibility fallback for repositories using 10.jpg…40.jpg. */
+        if(/^\d{3}\.jpg$/.test(u)){
+          img.src='/'+String(i+1).padStart(2,'0')+'.jpg';
+        }else if(!img.dataset.failed){
+          img.dataset.failed='1';
+          img.style.visibility='hidden';
+        }
+      },{once:false});
+      img.addEventListener('click',()=>openLightbox(img.currentSrc||img.src,img.alt));
+      batch.appendChild(img);
+    });
+
+    while(batch.children.length<4){
+      const empty=document.createElement('div');
+      empty.className='gallery-item gallery-placeholder';
+      empty.setAttribute('aria-hidden','true');
+      batch.appendChild(empty);
+    }
+    grid.appendChild(batch);
+    galleryBatches.push(batch);
+  }
+  updateGallery();
+}
+
+function updateGallery(){
+  galleryBatches.forEach((b,i)=>b.classList.toggle('active',i===galleryIndex));
+  const total=galleryBatches.length;
+  galleryPrev.disabled=total<=1 || galleryIndex===0;
+  galleryNext.disabled=total<=1 || galleryIndex===total-1;
+  galleryPage.textContent=total?`Groupe ${galleryIndex+1} / ${total} · 40 photos`:'';
+}
+
+galleryPrev.addEventListener('click',()=>{
+  if(galleryIndex>0){galleryIndex--;updateGallery();}
+});
+galleryNext.addEventListener('click',()=>{
+  if(galleryIndex<galleryBatches.length-1){galleryIndex++;updateGallery();}
+});
+
+loadRootGallery();
+const lightbox=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg');function openLightbox(src,alt){lbImg.src=src;lbImg.alt=alt;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lbImg.src='';document.body.classList.remove('modal-open')}document.getElementById('lightboxClose').onclick=closeLightbox;lightbox.onclick=e=>{if(e.target===lightbox)closeLightbox()};
+/* form: no false success */
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=e.currentTarget;
+  if(!f.reportValidity() || !document.getElementById('ageCheck').checked) return;
+
+  const name=document.getElementById('name').value.trim();
+  const address=document.getElementById('address').value.trim();
+  const city=document.getElementById('city').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const app=document.getElementById('contactApp').value;
+  const date=document.getElementById('date').value;
+  const duration=document.getElementById('duration').value;
+  const message=document.getElementById('message').value.trim();
+
+  if(!app || !address || !city){
+    document.getElementById('formStatus').textContent='Veuillez remplir tous les champs obligatoires.';
+    return;
+  }
+
+  const textMessage=
+`Nouvelle demande
+Nom / Prénom : ${name}
+Adresse postale : ${address}
+Ville : ${city}
+Téléphone : ${phone || 'Non renseigné'}
+Date & heure souhaitée : ${date || 'Non renseignée'}
+Durée : ${duration}
+Message : ${message || 'Aucun message'}
+`;
+
+  const status=document.getElementById('formStatus');
+
+  // Le navigateur ne permet pas à une page web d'envoyer directement
+  // un message privé vers tous les services. Le message est donc copié
+  // puis l'application / le profil choisi est ouvert.
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textMessage).catch(()=>{});
+    }
+  } catch(e) {}
+
+  const cleanId='';
+  if(app==='telegram'){
+    status.textContent='Votre demande est préparée et copiée. Ouverture de Telegram…';
+    try{ window.location.href='tg://resolve?domain='+encodeURIComponent(cleanId); }catch(e){}
+    setTimeout(()=>window.open('https://t.me/'+encodeURIComponent(cleanId),'_blank','noopener,noreferrer'),700);
+  }else if(app==='instagram'){
+    status.textContent='Votre demande est préparée et copiée. Ouverture d’Instagram…';
+    try{ window.location.href='instagram://user?username='+encodeURIComponent(cleanId); }catch(e){}
+    setTimeout(()=>window.open('https://www.instagram.com/'+encodeURIComponent(cleanId)+'/_blank','_blank','noopener,noreferrer'),700);
+  }else if(app==='x'){
+    status.textContent='Votre demande est préparée et copiée. Ouverture de X…';
+    try{ window.location.href='twitter://user?screen_name='+encodeURIComponent(cleanId); }catch(e){}
+    setTimeout(()=>window.open('https://x.com/'+encodeURIComponent(cleanId),'_blank','noopener,noreferrer'),700);
+  }else if(app==='signal'){
+    status.textContent='Votre demande est préparée et copiée. Ouverture de Signal…';
+    try{ window.location.href='sgnl://signal.me/#p/'+encodeURIComponent(identifier); }catch(e){}
+    setTimeout(()=>window.open('https://signal.me/#p/'+encodeURIComponent(identifier),'_blank','noopener,noreferrer'),700);
+  }else if(app==='teleguard'){
+    status.textContent='Votre demande est préparée et copiée. Ouverture de TeleGuard…';
+    try{ window.location.href='teleguard://'+encodeURIComponent(identifier); }catch(e){}
+  }
+});
+/* legal modal */
+const legal=document.getElementById('legalModal');document.getElementById('legalBtn').onclick=()=>{legal.classList.add('open');document.body.classList.add('modal-open')};function closeLegal(){legal.classList.remove('open');document.body.classList.remove('modal-open')}document.getElementById('legalClose').onclick=closeLegal;legal.onclick=e=>{if(e.target===legal)closeLegal()};
+/* Assistant moderne : construit automatiquement sa base de connaissances depuis le contenu actuel de la page. */
+const aiFab=document.getElementById('aiFab'),aiPanel=document.getElementById('aiPanel'),aiClose=document.getElementById('aiClose'),aiMessages=document.getElementById('aiMessages'),aiChips=document.getElementById('aiChips'),aiForm=document.getElementById('aiForm'),aiInput=document.getElementById('aiInput');
+let aiBusy=false;
+
+function normalizeAI(x){
+  return String(x||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+}
+
+/* Aucun réglage technique n'est nécessaire : le contenu est relu directement dans la page. */
+function buildAISiteContext(){
+  const selectors=['main section','#contact','footer'];
+  const parts=[];
+  document.querySelectorAll(selectors.join(',')).forEach(el=>{
+    const text=(el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();
+    if(text) parts.push(text);
+  });
+  return parts.join('\n');
+}
+function buildAIKnowledge(){
+  const rows=[...document.querySelectorAll('#contact .social-row')].map(row=>{
+    const label=row.querySelector('.label')?.textContent?.trim()||'';
+    const value=row.querySelector('.value')?.innerText?.trim()||'';
+    return label&&value?`${label}: ${value}`:'';
+  }).filter(Boolean);
+  const sections=[...document.querySelectorAll('main section')].map(s=>{
+    const title=s.querySelector('.section-title,h2,h3')?.innerText?.trim()||'';
+    const text=(s.innerText||'').replace(/\s+/g,' ').trim();
+    return title?`${title}: ${text}`:text;
+  }).filter(Boolean);
+  return {contact:rows.join(' | '),sections,full:buildAISiteContext()};
+}
+let AI_KNOWLEDGE=buildAIKnowledge();
+
+function aiSay(text,who='bot'){
+  const d=document.createElement('div');
+  d.className='ai-msg '+who;
+  d.textContent=text;
+  aiMessages.appendChild(d);
+  aiMessages.scrollTop=aiMessages.scrollHeight;
+}
+function aiTyping(){
+  const d=document.createElement('div');
+  d.className='ai-typing';
+  d.id='aiTyping';
+  d.innerHTML='<span></span><span></span><span></span>';
+  aiMessages.appendChild(d);
+  aiMessages.scrollTop=aiMessages.scrollHeight;
+}
+function aiOpen(){
+  AI_KNOWLEDGE=buildAIKnowledge();
+  aiPanel.classList.add('open');
+  aiFab.setAttribute('aria-expanded','true');
+  if(!aiMessages.children.length){
+    aiSay('Bonjour 👋 Je suis l’assistant du site. Je peux retrouver rapidement les informations affichées ici, notamment le contact, les informations générales, les tarifs publiés, la galerie, les déplacements et les mentions du site. Que souhaitez-vous savoir ?');
+    renderChips();
+  }
+  aiInput.focus();
+}
+function renderChips(){
+  aiChips.innerHTML='';
+  ['Informations','Contact','Tarifs','Galerie','Déplacements'].forEach(label=>{
+    const b=document.createElement('button');
+    b.type='button'; b.className='ai-chip'; b.textContent=label;
+    b.onclick=()=>aiAsk(label);
+    aiChips.appendChild(b);
+  });
+}
+function extractRelevantText(q){
+  const n=normalizeAI(q);
+  const terms=n.split(/[^a-z0-9@._-]+/).filter(x=>x.length>2);
+  const chunks=AI_KNOWLEDGE.sections.concat([AI_KNOWLEDGE.contact]).map(x=>x.trim()).filter(Boolean);
+  const scored=chunks.map(chunk=>{
+    const c=normalizeAI(chunk);
+    let score=0;
+    terms.forEach(t=>{if(c.includes(t)) score+=t.length>5?3:1;});
+    if(/contact|email|mail|telephone|signal|telegram|instagram|x\b/.test(n) && normalizeAI(AI_KNOWLEDGE.contact).includes(n.match(/contact|email|mail|signal|telegram|instagram|x\b/)?.[0]||'@@')) score+=4;
+    return {chunk,score};
+  }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score);
+  return scored.slice(0,3).map(x=>x.chunk).join('\n');
+}
+function aiAnswer(q){
+  AI_KNOWLEDGE=buildAIKnowledge();
+  const n=normalizeAI(q).trim();
+  if(!n) return 'Écrivez votre question et je chercherai l’information directement dans le contenu actuel du site.';
+  if(/^(bonjour|salut|hello|bonsoir|coucou)\b/.test(n)) return 'Bonjour 👋 Je suis prêt à vous renseigner sur les informations actuellement affichées sur le site.';
+  if(/merci|thanks/.test(n)) return 'Avec plaisir !';
+  if(/qui es tu|qui es-tu|tu es quoi|assistant/.test(n)) return 'Je suis l’assistant du site. Ma base de connaissances est reconstruite automatiquement à partir du contenu actuel de la page, sans configuration manuelle à maintenir.';
+  if(/aide|help|que peux tu|que peux-tu|questions/.test(n)) return 'Vous pouvez me demander une information sur le contact, les tarifs publiés, la galerie, les déplacements, les informations générales ou les mentions affichées sur le site.';
+  const relevant=extractRelevantText(q);
+  if(relevant){
+    return 'Voici ce que je trouve sur le site :\n\n'+relevant.slice(0,1400);
+  }
+  if(/contact|email|mail|joindre|ecrire|e-mail/.test(n) && AI_KNOWLEDGE.contact)
+    return 'Les moyens de contact actuellement affichés sont : '+AI_KNOWLEDGE.contact+'.';
+  return 'Je ne trouve pas cette information dans le contenu actuellement publié sur cette page. Essayez une question plus précise, par exemple « Comment contacter Micheline ? » ou « Quels tarifs sont affichés ? ».';
+}
+function aiAsk(q){
+  if(!q||aiBusy)return;
+  aiSay(q,'user');
+  aiBusy=true;
+  aiChips.innerHTML='';
+  aiTyping();
+  setTimeout(()=>{
+    document.getElementById('aiTyping')?.remove();
+    aiSay(aiAnswer(q));
+    aiBusy=false;
+    renderChips();
+  },420);
+}
+function syncAssistantLocale(){
+  const sub=document.getElementById('aiSub'),inp=document.getElementById('aiInput'),disc=document.getElementById('aiDisclaimer');
+  if(sub)sub.textContent='En ligne · Réponse instantanée';
+  if(inp)inp.placeholder='Écrivez votre message…';
+  if(disc)disc.textContent='Les réponses utilisent automatiquement le contenu actuellement affiché sur cette page.';
+}
+syncAssistantLocale();
+aiFab.onclick=aiOpen;
+aiClose.onclick=()=>{aiPanel.classList.remove('open');aiFab.setAttribute('aria-expanded','false')};
+aiForm.onsubmit=e=>{e.preventDefault();const q=aiInput.value.trim();aiInput.value='';aiAsk(q)};
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLegal();closeLightbox()}});
+</script>
+
+
+
+
+
+<style id="hero-background-style">
+#hero{
+  position:relative !important;
+  isolation:isolate !important;
+  overflow:hidden !important;
+  min-height:100svh !important;
+  padding:110px 0 70px !important;
+  display:grid !important;
+  place-items:center !important;
+  background:#080808 !important;
+}
+#hero .hero-bg{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-width:none !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+  z-index:-2 !important;
+  display:block !important;
+  user-select:none !important;
+  pointer-events:none !important;
+}
+#hero .hero-scrim{
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-1 !important;
+  pointer-events:none !important;
+  background:linear-gradient(180deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.30) 45%,rgba(0,0,0,.58) 100%) !important;
+}
+#hero .hero{
+  position:relative !important;
+  z-index:2 !important;
+  min-height:0 !important;
+  width:100% !important;
+  background:transparent !important;
+}
+#hero .hero h1,#hero .hero .lead,#hero .hero .eyebrow,#hero .hero .btn{
+  position:relative !important;
+  z-index:3 !important;
+}
+@media(max-width:760px){
+  #hero{min-height:calc(100svh - 68px) !important;padding:95px 0 55px !important;}
+  #hero .hero-bg{object-position:center center !important;}
+}
+</style>
+
+
+
+
+<style id="responsive-visual-parity">
+/* Cohérence visuelle mobile / desktop : même grille et mêmes proportions, avec une adaptation fluide. */
+html{font-size:16px}
+body{overflow-x:hidden}
+.container{width:min(1180px,calc(100% - 36px));margin-inline:auto}
+section{padding:88px 0}
+
+/* Hero : même composition sur tous les écrans */
+#hero{min-height:100svh!important;padding:120px 0 80px!important}
+#hero .hero{width:100%;max-width:1180px;margin:auto;padding-inline:18px}
+#hero .hero h1{font-size:clamp(3.2rem,9vw,6.5rem)}
+#hero .hero .btn{min-width:260px}
+
+/* Même logique de grilles qu'en grand écran */
+.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.about{grid-template-columns:1fr 1fr}
+.contact{grid-template-columns:1.05fr .95fr}
+.price-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gallery-batch{grid-template-columns:repeat(2,minmax(0,1fr))}
+.facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* Les blocs rétrécissent avant de se réorganiser : pas de changement brutal de structure. */
+.service-cat,.price-card,.fact{min-width:0}
+.price-card{padding:clamp(16px,2.2vw,24px)}
+.about,.contact{gap:clamp(24px,3.5vw,45px)}
+
+/* Petit écran : on conserve la structure, mais on réduit uniquement les dimensions. */
+@media(max-width:760px){
+  .container{width:calc(100% - 28px);max-width:1180px}
+  section{padding:72px 0}
+  .section-head{margin-bottom:24px}
+  .section-title{font-size:clamp(1.85rem,7vw,2.65rem)}
+
+  #hero{min-height:calc(100svh - 70px)!important;padding:96px 0 60px!important}
+  #hero .hero{padding-inline:7px}
+  #hero .hero h1{font-size:clamp(3rem,13vw,5rem);line-height:.98}
+  #hero .hero .lead{font-size:.98rem;max-width:720px}
+  #hero .hero .btn{width:min(100%,420px);min-width:0}
+
+  .services-grid{gap:12px}
+  .service-cat{padding:17px}
+  .service-cat h3{font-size:1rem}
+  .service-cat ul{font-size:.78rem}
+
+  .about,.contact{gap:20px}
+  .about-copy{font-size:.9rem}
+  .facts{gap:9px}
+  .fact{padding:14px}
+  .fact b{font-size:.9rem}
+  .fact span{font-size:.74rem}
+
+  .price-grid{gap:9px}
+  .price-card{padding:14px 11px}
+  .price-card strong{font-size:clamp(1.45rem,6vw,2rem)}
+  .price-card .duration,.price-card small{font-size:.72rem}
+
+  .gallery-stage{padding-inline:40px}
+  .gallery-batch{gap:9px}
+  .gallery-item{border-radius:8px}
+
+  .form{gap:11px}
+  .form input,.form textarea,.form select{padding:12px}
+  .social-row{gap:8px;padding:13px 0}
+  .social-row .label{width:72px;font-size:.7rem}
+  .social-row .value{font-size:.82rem;min-width:0;overflow-wrap:anywhere}
+
+  footer{padding:34px 0}
+}
+
+@media(max-width:430px){
+  .container{width:calc(100% - 22px)}
+  section{padding:62px 0}
+  .services-grid{gap:8px}
+  .service-cat{padding:13px 11px}
+  .service-cat h3{font-size:.9rem}
+  .service-cat ul{font-size:.7rem;line-height:1.5}
+  .price-grid{gap:6px}
+  .price-card{padding:12px 8px}
+  .price-card strong{font-size:1.35rem}
+  .gallery-stage{padding-inline:36px}
+  .gallery-batch{gap:7px}
+  #hero .hero h1{font-size:clamp(2.8rem,14vw,4rem)}
+}
+</style>
+
+
+<style id="contact-separated-layout">
+/* Formulaire et moyens de communication séparés */
+.contact{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:28px !important;
+  align-items:start;
+}
+#contactForm,
+#contact .social-list{
+  background:var(--paper, #fff);
+  border:1px solid var(--line, #d9cdd1);
+  border-radius:18px;
+  box-shadow:var(--shadow, 0 10px 30px rgba(23,23,23,.10));
+}
+#contactForm{
+  padding:24px;
+}
+#contact .social-list{
+  padding:8px 24px;
+}
+#contact .social-row .value{
+  min-width:0;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+@media(max-width:760px){
+  #contactForm{padding:18px;}
+  #contact .social-list{padding:6px 18px;}
+  .contact{gap:20px !important;}
+}
+</style>
+
+
+<style id="modern-ai-style">
+#aiFab{
+  width:62px;height:62px;border:0;border-radius:20px;
+  background:linear-gradient(145deg,#d9bb63,#a7832d);
+  color:#090909;box-shadow:0 14px 38px rgba(0,0,0,.48);
+  font-size:1.35rem;
+}
+#aiFab:hover{transform:translateY(-3px) scale(1.04)}
+#aiFab .ai-dot{width:12px;height:12px;right:0;top:0;background:#35c979}
+.ai-panel{border-radius:24px;background:#0b0b0b;border-color:rgba(201,168,76,.28)}
+.ai-head{padding:15px 16px}
+.ai-avatar{
+  width:42px;height:42px;border-radius:14px;
+  background:linear-gradient(145deg,#d9bb63,#a7832d);
+  color:#090909;font-size:1.05rem;
+}
+.ai-head small{display:block;color:#777;font-size:.68rem;margin-top:2px}
+.ai-messages{padding:16px}
+.ai-msg{font-size:.84rem;box-shadow:0 3px 12px rgba(0,0,0,.12)}
+.ai-msg.bot{background:#151515;border-color:#262626}
+.ai-msg.user{background:rgba(201,168,76,.13)}
+.ai-typing{
+  width:max-content;padding:8px 12px;border-radius:14px;
+  background:#151515;border:1px solid #272727;color:#888;
+}
+.ai-typing span{
+  display:inline-block;width:5px;height:5px;border-radius:50%;
+  background:#999;margin:0 2px;animation:aiBounce 1s infinite ease-in-out;
+}
+.ai-typing span:nth-child(2){animation-delay:.15s}
+.ai-typing span:nth-child(3){animation-delay:.3s}
+@keyframes aiBounce{0%,60%,100%{transform:translateY(0);opacity:.45}30%{transform:translateY(-3px);opacity:1}}
+</style>
+
+
+<style id="ai-menu-color-harmonization">
+/* Palette de l'assistant alignée sur le menu du site */
+#aiPanel{
+  background:#fff !important;
+  border:1px solid rgba(126,16,54,.28) !important;
+  box-shadow:0 18px 55px rgba(0,0,0,.28) !important;
+}
+#aiPanel .ai-head,
+#aiPanel .ai-input-wrap{
+  background:#000 !important;
+}
+#aiPanel .ai-head{
+  border-bottom:1px solid rgba(126,16,54,.35) !important;
+}
+#aiPanel .ai-input-wrap{
+  border-top:1px solid rgba(126,16,54,.35) !important;
+}
+#aiPanel .ai-avatar,
+#aiFab,
+#aiPanel .ai-send{
+  background:#000000 !important;
+  color:#fff !important;
+}
+#aiFab{
+  border:2px solid rgba(255,255,255,.12) !important;
+  box-shadow:0 10px 30px rgba(0,0,0,.38) !important;
+}
+#aiPanel .ai-messages{
+  background:#fff !important;
+}
+#aiPanel .ai-msg.bot{
+  background:#f5f3f3 !important;
+  color:#222 !important;
+  border:1px solid #e2dfe0 !important;
+}
+#aiPanel .ai-msg.user{
+  background:#000000 !important;
+  color:#fff !important;
+  border-color:#000000 !important;
+}
+#aiPanel .ai-chip{
+  background:#fff !important;
+  color:#000000 !important;
+  border:1px solid #000000 !important;
+}
+#aiPanel .ai-chip:hover{
+  background:#000000 !important;
+  color:#fff !important;
+}
+#aiPanel .ai-disclaimer{
+  background:#f5f3f3 !important;
+  color:#555 !important;
+  border-top:1px solid #e2dfe0 !important;
+}
+#aiPanel .ai-input{
+  background:#fff !important;
+  color:#222 !important;
+  border:2px solid #000000 !important;
+}
+#aiPanel .ai-input::placeholder{color:#777 !important}
+#aiPanel .ai-close{
+  color:#fff !important;
+}
+#aiPanel .ai-dot{
+  background:#35c979 !important;
+  border-color:#000 !important;
+}
+#aiPanel .ai-typing{
+  background:#f5f3f3 !important;
+  border-color:#e2dfe0 !important;
+  color:#000000 !important;
+}
+#aiPanel .ai-typing span{background:#000000 !important}
+</style>
+
+
+<style id="ai-vivid-color-theme">
+:root{--ai-accent:#00b8ff;--ai-accent-strong:#008ee6;--ai-accent-soft:#e8f8ff;}
+#aiPanel{
+  border-color:rgba(0,184,255,.35) !important;
+}
+#aiPanel .ai-head,
+#aiPanel .ai-input-wrap{
+  background:#000 !important;
+}
+#aiPanel .ai-head{border-bottom-color:rgba(0,184,255,.35) !important;}
+#aiPanel .ai-input-wrap{border-top-color:rgba(0,184,255,.35) !important;}
+
+#aiPanel .ai-avatar,
+#aiFab,
+#aiPanel .ai-send{
+  background:var(--ai-accent) !important;
+  color:#001018 !important;
+}
+#aiFab{
+  border:2px solid rgba(255,255,255,.25) !important;
+  box-shadow:0 10px 30px rgba(0,184,255,.32) !important;
+}
+#aiPanel .ai-msg.user{
+  background:var(--ai-accent) !important;
+  color:#001018 !important;
+  border-color:var(--ai-accent) !important;
+}
+#aiPanel .ai-chip{
+  background:#fff !important;
+  color:var(--ai-accent-strong) !important;
+  border:2px solid var(--ai-accent) !important;
+  font-weight:600 !important;
+}
+#aiPanel .ai-chip:hover{
+  background:var(--ai-accent) !important;
+  color:#001018 !important;
+}
+#aiPanel .ai-input{
+  background:#fff !important;
+  color:#111 !important;
+  border:2px solid var(--ai-accent) !important;
+  box-shadow:0 0 0 3px rgba(0,184,255,.10) !important;
+}
+#aiPanel .ai-input:focus{
+  outline:none !important;
+  border-color:var(--ai-accent-strong) !important;
+  box-shadow:0 0 0 4px rgba(0,184,255,.18) !important;
+}
+#aiPanel .ai-disclaimer{
+  border-top-color:#d9eef6 !important;
+  background:#f7fcff !important;
+}
+#aiPanel .ai-typing{
+  background:var(--ai-accent-soft) !important;
+  border-color:#bcecff !important;
+  color:var(--ai-accent-strong) !important;
+}
+#aiPanel .ai-typing span{background:var(--ai-accent-strong) !important;}
+</style>
+
+
+<style id="ai-white-readable-theme">
+:root{
+  --ai-paper:#f4f1ed;
+  --ai-ink:#111111;
+  --ai-line:#c9c3bd;
+}
+#aiPanel{
+  background:var(--ai-paper) !important;
+  color:var(--ai-ink) !important;
+  border:1px solid #bdb6af !important;
+}
+#aiPanel .ai-head{
+  background:#000 !important;
+  color:#fff !important;
+  border-bottom:1px solid #333 !important;
+}
+#aiPanel .ai-avatar{
+  background:#fff !important;
+  color:#000 !important;
+  border:1px solid #fff !important;
+}
+#aiPanel .ai-close{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:40px !important;
+  height:40px !important;
+  min-width:40px !important;
+  border:2px solid #fff !important;
+  border-radius:50% !important;
+  background:#fff !important;
+  color:#000 !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  font-size:1.35rem !important;
+  line-height:1 !important;
+  cursor:pointer !important;
+  z-index:20 !important;
+}
+#aiPanel .ai-close:hover{
+  background:#e9e5e0 !important;
+  color:#000 !important;
+}
+#aiPanel .ai-messages{
+  background:var(--ai-paper) !important;
+  color:var(--ai-ink) !important;
+}
+#aiPanel .ai-msg.bot{
+  background:#fff !important;
+  color:#111 !important;
+  border:1px solid var(--ai-line) !important;
+}
+#aiPanel .ai-msg.user{
+  background:#111 !important;
+  color:#fff !important;
+  border:1px solid #111 !important;
+}
+#aiPanel .ai-chip{
+  background:#fff !important;
+  color:#111 !important;
+  border:2px solid #111 !important;
+  font-weight:600 !important;
+  box-shadow:none !important;
+}
+#aiPanel .ai-chip:hover{
+  background:#111 !important;
+  color:#fff !important;
+}
+#aiPanel .ai-disclaimer{
+  background:#fff !important;
+  color:#333 !important;
+  border-top:1px solid var(--ai-line) !important;
+}
+#aiPanel .ai-input-wrap{
+  background:#000 !important;
+  border-top:1px solid #333 !important;
+}
+#aiPanel .ai-input{
+  background:#fff !important;
+  color:#111 !important;
+  border:2px solid #111 !important;
+  box-shadow:none !important;
+}
+#aiPanel .ai-input::placeholder{color:#555 !important}
+#aiPanel .ai-send{
+  background:#fff !important;
+  color:#111 !important;
+  border:2px solid #fff !important;
+}
+#aiPanel .ai-send:hover{
+  background:#e9e5e0 !important;
+  color:#000 !important;
+}
+#aiPanel .ai-typing{
+  background:#fff !important;
+  border-color:var(--ai-line) !important;
+  color:#111 !important;
+}
+#aiPanel .ai-typing span{background:#111 !important}
+#aiFab{
+  background:#fff !important;
+  color:#111 !important;
+  border:2px solid #111 !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.25) !important;
+}
+#aiFab .ai-dot{
+  background:#35c979 !important;
+  border-color:#111 !important;
+}
+</style>
+
+</body>
+</html>
