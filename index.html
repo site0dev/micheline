@@ -859,7 +859,7 @@ nav .chevron,
 <button class="gallery-arrow gallery-prev" id="galleryPrev" type="button" data-i18n-aria="galleryPrev" aria-label="Photos précédentes"><i class="fas fa-chevron-left"></i></button>
 <div class="gallery-grid" id="galleryGrid"><div class="gallery-empty" id="galleryLoader"><i class="fas fa-spinner fa-spin"></i></div></div>
 <button class="gallery-arrow gallery-next" id="galleryNext" type="button" data-i18n-aria="galleryNext" aria-label="Photos suivantes"><i class="fas fa-chevron-right"></i></button>
-<div class="gallery-page" id="galleryPage" aria-live="polite"></div>
+
 </div></div></section>
 <section id="about"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-user"></i><span data-i18n="aboutTitle">À propos</span></h2></div><div class="about"><div class="about-copy"><p><strong style="color:var(--gold);font-family:'Playfair Display',serif">Micheline</strong>, <span data-i18n="aboutAge">26 ans</span>, <span data-i18n="aboutHeight">1m68</span>.</p></div><div class="facts"><div class="fact"><b>18+</b><span data-i18n="factAdult">Accès réservé aux majeurs</span></div></div></div></div></section>
 <section id="contact"><div class="container"><div class="section-head"><h2 class="section-title"><i class="fas fa-paper-plane"></i><span data-i18n="contactTitle">Prendre contact</span></h2></div><div class="contact"><form class="form" id="contactForm">
@@ -1162,7 +1162,7 @@ function loadRootGallery(){
       img.loading=(i<4?'eager':'lazy');
       img.decoding='async';
       if(i===0) img.fetchPriority='high';
-      img.alt=`Micheline — ${((translations[locale]||translations['fr-FR']).photoAlt||'photo')} ${String(i+1).padStart(2,'0')}`;
+      img.alt=`Micheline — ${((translations[locale]||translations['fr-FR']).photoAlt||'photo')}`;
       img.addEventListener('error',()=>{
         /* Compatibility fallback for repositories using 10.jpg…40.jpg. */
         if(/^\d{3}\.jpg$/.test(u)){
@@ -1193,7 +1193,7 @@ function updateGallery(){
   const total=galleryBatches.length;
   galleryPrev.disabled=total<=1 || galleryIndex===0;
   galleryNext.disabled=total<=1 || galleryIndex===total-1;
-  galleryPage.textContent=total?`Groupe ${galleryIndex+1} / ${total} · 40 photos`:'';
+  if(galleryPage) galleryPage.textContent='';
 }
 
 galleryPrev.addEventListener('click',()=>{
