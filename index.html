@@ -805,6 +805,78 @@ nav .chevron,
   --accent: #000000 !important;
 }
 </style>
+
+<style id="legal-readability-fix">
+/* Mentions légales : lecture claire sur ordinateur et mobile */
+#legalModal {
+  background: rgba(0,0,0,.86) !important;
+  padding: 12px !important;
+  align-items: center !important;
+}
+#legalModal .modal-card {
+  background: #ffffff !important;
+  color: #222222 !important;
+  width: min(900px, 100%) !important;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  padding: clamp(20px, 4vw, 36px) !important;
+  border: 1px solid #c9c9c9 !important;
+  border-radius: 16px !important;
+  line-height: 1.65 !important;
+}
+#legalModal .modal-top {
+  position: sticky !important;
+  top: -36px !important;
+  z-index: 2 !important;
+  background: #ffffff !important;
+  padding: 8px 0 14px !important;
+  border-bottom: 1px solid #dddddd !important;
+}
+#legalModal h2 {
+  color: #8a6500 !important;
+  font-size: clamp(1.35rem, 4vw, 1.9rem) !important;
+  line-height: 1.25 !important;
+  margin: 0 !important;
+}
+#legalModal h3 {
+  color: #222222 !important;
+  font-size: 1.02rem !important;
+  line-height: 1.4 !important;
+  margin: 24px 0 9px !important;
+}
+#legalModal h4 {
+  color: #333333 !important;
+  font-size: .94rem !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  margin: 10px 0 !important;
+}
+#legalModal p, #legalModal li, #legalModal div, #legalModal span {
+  color: #333333 !important;
+  font-size: .94rem !important;
+  line-height: 1.7 !important;
+}
+#legalModal .close {
+  flex: 0 0 40px !important;
+  color: #222222 !important;
+  background: #f2f2f2 !important;
+  border: 1px solid #bbbbbb !important;
+  font-size: 1.4rem !important;
+}
+@media (max-width: 600px) {
+  #legalModal { padding: 8px !important; }
+  #legalModal .modal-card {
+    max-height: 94vh !important;
+    padding: 18px !important;
+    border-radius: 12px !important;
+  }
+  #legalModal .modal-top { top: -18px !important; }
+  #legalModal h3 { font-size: .98rem !important; }
+  #legalModal h4, #legalModal p, #legalModal li, #legalModal div, #legalModal span {
+    font-size: .9rem !important;
+  }
+}
+</style>
 </head>
 <body><div id="site-discreet-note" style="display:none" aria-hidden="true">Site d’information et de prise de contact réservé aux adultes.</div>
 <div id="age-overlay" role="dialog" aria-modal="true" aria-labelledby="age-title">
@@ -877,13 +949,10 @@ nav .chevron,
 
 <label for="contactApp">Application de contact</label>
 <select id="contactApp" required>
-  <option value="" selected disabled>Choisissez une application</option>
-  <option value="telegram">Telegram</option>
-  <option value="instagram">Instagram</option>
-
-<option value="x">X</option>
-<option value="signal">Signal</option>
-<option value="teleguard">TeleGuard</option>
+  <option value="" selected disabled>Choisissez un moyen de contact</option>
+  <option value="signal">Signal — Micheline.08</option>
+  <option value="teleguard">TeleGuard — SL327SBV7</option>
+  <option value="email">E-mail — michelinedumas090@gmail.com</option>
 </select>
 
 <label for="date">Date & heure souhaitée</label>
@@ -913,7 +982,7 @@ nav .chevron,
 </button>
 <div class="status" id="formStatus" aria-live="polite"></div>
 </form>
-<div><div class="social-list"><div class="social-row"><i class="fas fa-shield-alt"></i><span class="label">TeleGuard</span><span class="value">SL327SBV7 <button class="copy-btn" data-copy="SL327SBV7" data-i18n="copy">Copier</button></span></div><div class="social-row"><i class="fab fa-signal-messenger"></i><span class="label">Signal</span><span class="value">Micheline.08 <button class="copy-btn" data-copy="Micheline.08" data-i18n="copy">Copier</button></span></div><div class="social-row"><i class="fas fa-envelope"></i><span class="label">E-mail</span><span class="value"><a href="mailto:michelinedumas090@gmail.com">michelinedumas090@gmail.com</a></span></div></div></div></div></div></section>
+<div><div class="social-list"><div class="social-row"><i class="fas fa-shield-alt"></i><span class="label">TeleGuard</span><span class="value"><a href="javascript:void(0)" class="contact-link" data-app="teleguard" data-id="SL327SBV7">SL327SBV7</a></span></div><div class="social-row"><i class="fab fa-signal-messenger"></i><span class="label">Signal</span><span class="value"><a href="javascript:void(0)" class="contact-link" data-app="signal" data-id="Micheline.08">Micheline.08</a></span></div><div class="social-row"><i class="fas fa-envelope"></i><span class="label">E-mail</span><span class="value"><a class="contact-link" data-app="email" href="mailto:michelinedumas090@gmail.com">michelinedumas090@gmail.com</a></span></div></div></div></div></div></section>
 </main>
 <!-- ASSISTANT FLOTTANT -->
 <button id="aiFab" type="button" aria-label="Ouvrir la messagerie" aria-expanded="false"><i class="fas fa-comment-dots"></i><span class="ai-dot"></span></button>
@@ -1225,49 +1294,53 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
     return;
   }
 
-  const textMessage=
-`Nouvelle demande
-Nom / Prénom : ${name}
-Adresse postale : ${address}
-Ville : ${city}
-Téléphone : ${phone || 'Non renseigné'}
-Date & heure souhaitée : ${date || 'Non renseignée'}
-Durée : ${duration}
-Message : ${message || 'Aucun message'}
-`;
-
+  const textMessage=`Nouvelle demande\nNom / Prénom : ${name}\nAdresse postale : ${address}\nVille : ${city}\nTéléphone : ${phone || 'Non renseigné'}\nDate & heure souhaitée : ${date || 'Non renseignée'}\nDurée : ${duration}\nMessage : ${message || 'Aucun message'}\n`;
   const status=document.getElementById('formStatus');
 
-  // Le navigateur ne permet pas à une page web d'envoyer directement
-  // un message privé vers tous les services. Le message est donc copié
-  // puis l'application / le profil choisi est ouvert.
-  try {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(textMessage).catch(()=>{});
-    }
-  } catch(e) {}
-
-  const cleanId='';
-  if(app==='telegram'){
-    status.textContent='Votre demande est préparée et copiée. Ouverture de Telegram…';
-    try{ window.location.href='tg://resolve?domain='+encodeURIComponent(cleanId); }catch(e){}
-    setTimeout(()=>window.open('https://t.me/'+encodeURIComponent(cleanId),'_blank','noopener,noreferrer'),700);
-  }else if(app==='instagram'){
-    status.textContent='Votre demande est préparée et copiée. Ouverture d’Instagram…';
-    try{ window.location.href='instagram://user?username='+encodeURIComponent(cleanId); }catch(e){}
-    setTimeout(()=>window.open('https://www.instagram.com/'+encodeURIComponent(cleanId)+'/_blank','_blank','noopener,noreferrer'),700);
-  }else if(app==='x'){
-    status.textContent='Votre demande est préparée et copiée. Ouverture de X…';
-    try{ window.location.href='twitter://user?screen_name='+encodeURIComponent(cleanId); }catch(e){}
-    setTimeout(()=>window.open('https://x.com/'+encodeURIComponent(cleanId),'_blank','noopener,noreferrer'),700);
-  }else if(app==='signal'){
-    status.textContent='Votre demande est préparée et copiée. Ouverture de Signal…';
-    try{ window.location.href='sgnl://signal.me/#p/'+encodeURIComponent(identifier); }catch(e){}
-    setTimeout(()=>window.open('https://signal.me/#p/'+encodeURIComponent(identifier),'_blank','noopener,noreferrer'),700);
-  }else if(app==='teleguard'){
-    status.textContent='Votre demande est préparée et copiée. Ouverture de TeleGuard…';
-    try{ window.location.href='teleguard://'+encodeURIComponent(identifier); }catch(e){}
+  if(app==='email'){
+    const subject=encodeURIComponent('Nouvelle demande de contact');
+    const body=encodeURIComponent(textMessage);
+    status.textContent='Ouverture de votre application e-mail…';
+    window.location.href='mailto:michelinedumas090@gmail.com?subject='+subject+'&body='+body;
+    return;
   }
+
+  navigator.clipboard?.writeText(textMessage).catch(()=>{});
+  const identifier=app==='signal' ? 'Micheline.08' : 'SL327SBV7';
+  try{ navigator.clipboard?.writeText(identifier).catch(()=>{}); }catch(e){}
+
+  if(app==='signal'){
+    status.textContent='Nom d’utilisateur Signal copié. Ouverture de Signal…';
+    try{ window.location.href='sgnl://'; }catch(e){}
+    setTimeout(()=>{ try{ window.open('https://signal.me/','_blank','noopener,noreferrer'); }catch(e){} },700);
+  }else if(app==='teleguard'){
+    status.textContent='Identifiant TeleGuard copié. Ouverture de TeleGuard…';
+    try{ window.location.href='teleguard://'; }catch(e){}
+  }
+});
+
+// Clic direct sur chaque moyen de contact : copie l'identifiant/adresse et ouvre le moyen correspondant.
+document.querySelectorAll('.contact-link[data-app]').forEach(link=>{
+  link.addEventListener('click',e=>{
+    const app=link.dataset.app;
+    const id=link.dataset.id || link.textContent.trim();
+    if(app==='email'){
+      e.preventDefault();
+      copyText(id);
+      window.location.href='mailto:'+encodeURIComponent(id);
+      return;
+    }
+    e.preventDefault();
+    try{ navigator.clipboard?.writeText(id).catch(()=>{}); }catch(err){}
+    if(app==='signal'){
+      showToast('Nom d’utilisateur Signal copié. Ouverture de Signal…');
+      try{ window.location.href='sgnl://'; }catch(err){}
+      setTimeout(()=>{ try{ window.open('https://signal.me/','_blank','noopener,noreferrer'); }catch(err){} },700);
+    }else if(app==='teleguard'){
+      showToast('Identifiant TeleGuard copié. Ouverture de TeleGuard…');
+      try{ window.location.href='teleguard://'; }catch(err){}
+    }
+  });
 });
 /* legal modal */
 const legal=document.getElementById('legalModal');document.getElementById('legalBtn').onclick=()=>{legal.classList.add('open');document.body.classList.add('modal-open')};function closeLegal(){legal.classList.remove('open');document.body.classList.remove('modal-open')}document.getElementById('legalClose').onclick=closeLegal;legal.onclick=e=>{if(e.target===legal)closeLegal()};
