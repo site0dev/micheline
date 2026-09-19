@@ -295,6 +295,10 @@ input[type="submit"]:hover, input[type="button"]:hover {
   background: var(--brand-dark) !important;
   border-color: var(--brand-dark) !important;
 }
+#submit { background:#d4af37 !important; color:#000000 !important; border:1px solid #d4af37 !important; font-weight:700 !important; text-shadow:none !important; }
+#submit i, #submit span { color:#000000 !important; opacity:1 !important; }
+#submit:hover, #submit:focus { background:#f0cc55 !important; color:#000000 !important; }
+#submit:hover i, #submit:hover span, #submit:focus i, #submit:focus span { color:#000000 !important; }
 
 section, .card, .box, .panel, .profile-card, .contact-card,
 .form-card, .social-card, .gallery-card, .legal-card {
@@ -1275,7 +1279,7 @@ galleryNext.addEventListener('click',()=>{
 loadRootGallery();
 const lightbox=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg');function openLightbox(src,alt){lbImg.src=src;lbImg.alt=alt;lightbox.classList.add('open');lightbox.setAttribute('aria-hidden','false');document.body.classList.add('modal-open')}function closeLightbox(){lightbox.classList.remove('open');lightbox.setAttribute('aria-hidden','true');lbImg.src='';document.body.classList.remove('modal-open')}document.getElementById('lightboxClose').onclick=closeLightbox;lightbox.onclick=e=>{if(e.target===lightbox)closeLightbox()};
 /* form: no false success */
-document.getElementById('contactForm').addEventListener('submit',e=>{
+document.getElementById('contactForm').addEventListener('submit',async e=>{
   e.preventDefault();
   const f=e.currentTarget;
   if(!f.reportValidity() || !document.getElementById('ageCheck').checked) return;
@@ -1294,7 +1298,8 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
     return;
   }
 
-  const textMessage=`Nouvelle demande\nNom / Prénom : ${name}\nAdresse postale : ${address}\nVille : ${city}\nTéléphone : ${phone || 'Non renseigné'}\nDate & heure souhaitée : ${date || 'Non renseignée'}\nDurée : ${duration}\nMessage : ${message || 'Aucun message'}\n`;
+  const recipient = app==='signal' ? 'Signal — Micheline.08' : app==='teleguard' ? 'TeleGuard — SL327SBV7' : 'E-mail — michelinedumas090@gmail.com';
+  const textMessage=`Nouvelle demande\nMoyen de contact : ${recipient}\nNom / Prénom : ${name}\nAdresse postale : ${address}\nVille : ${city}\nTéléphone : ${phone || 'Non renseigné'}\nDate & heure souhaitée : ${date || 'Non renseignée'}\nDurée : ${duration}\nMessage : ${message || 'Aucun message'}\n`;
   const status=document.getElementById('formStatus');
 
   if(app==='email'){
@@ -1305,9 +1310,12 @@ document.getElementById('contactForm').addEventListener('submit',e=>{
     return;
   }
 
-  navigator.clipboard?.writeText(textMessage).catch(()=>{});
-  const identifier=app==='signal' ? 'Micheline.08' : 'SL327SBV7';
-  try{ navigator.clipboard?.writeText(identifier).catch(()=>{}); }catch(e){}
+  // Signal et TeleGuard ne permettent pas à cette page web d'envoyer automatiquement le message.
+  // Toute la demande est donc copiée avant l'ouverture de l'application choisie.
+  try{ await navigator.clipboard.writeText(textMessage); }catch(e){
+    const ta=document.createElement('textarea'); ta.value=textMessage; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand('copy'); ta.remove();
+  }
 
   if(app==='signal'){
     status.textContent='Nom d’utilisateur Signal copié. Ouverture de Signal…';
