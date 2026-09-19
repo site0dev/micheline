@@ -1310,46 +1310,77 @@ document.getElementById('contactForm').addEventListener('submit',async e=>{
     return;
   }
 
-  // Signal et TeleGuard ne permettent pas à cette page web d'envoyer automatiquement le message.
-  // Toute la demande est donc copiée avant l'ouverture de l'application choisie.
-  try{ await navigator.clipboard.writeText(textMessage); }catch(e){
-    const ta=document.createElement('textarea'); ta.value=textMessage; ta.style.position='fixed'; ta.style.opacity='0';
-    document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand('copy'); ta.remove();
+  // Messageries : le site prépare la demande, la copie dans le presse-papiers,
+  // puis ouvre l'application. Le client garde toujours la main sur l'envoi.
+  function copyRequest(text){
+    try{
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text).catch(()=>{});
+      }else{
+        const ta=document.createElement('textarea');
+        ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+        document.body.appendChild(ta); ta.focus(); ta.select();
+        try{document.execCommand('copy')}catch(_){ }
+        ta.remove();
+      }
+    }catch(_){ }
   }
 
-  if(app==='signal'){
-    status.textContent='Nom d’utilisateur Signal copié. Ouverture de Signal…';
-    try{ window.location.href='sgnl://'; }catch(e){}
-    setTimeout(()=>{ try{ window.open('https://signal.me/','_blank','noopener,noreferrer'); }catch(e){} },700);
-  }else if(app==='teleguard'){
-    status.textContent='Identifiant TeleGuard copié. Ouverture de TeleGuard…';
-    try{ window.location.href='teleguard://'; }catch(e){}
+  function openMessagingApp(app, textMessage){
+    const encoded=encodeURIComponent(textMessage);
+    const isAndroid=/Android/i.test(navigator.userAgent);
+    const isIOS=/iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    if(app==='signal'){
+      // Signal : ouvre l'application via son schéma. Le texte préparé reste
+      // copié afin que le client puisse le coller et confirmer l'envoi.
+      if(isAndroid){
+        window.location.href='intent://compose?text='+encoded+'#Intent;scheme=sgnl;package=org.thoughtcrime.securesms;end';
+        setTimeout(()=>{ if(document.visibilityState==='visible') window.location.href='sgnl://compose?text='+encoded; },700);
+      }else{
+        window.location.href='sgnl://compose?text='+encoded;
+      }
+      return;
+    }
+
+    if(app==='teleguard'){
+      // TeleGuard ne publie pas de lien web permettant de préremplir une
+      // conversation. On ouvre donc directement l'application installée et
+      // le texte complet reste dans le presse-papiers pour collage manuel.
+      if(isAndroid){
+        window.location.href='intent://#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=ch.swisscows.messenger.teleguardapp;end';
+      }else if(isIOS){
+        window.location.href='teleguard://';
+      }else{
+        window.location.href='teleguard://';
+      }
+    }
+  }
+
+  if(app==='signal' || app==='teleguard'){
+    status.textContent=(app==='signal'
+      ? 'Demande copiée. Ouverture de Signal… Vous pourrez vérifier puis envoyer.'
+      : 'Demande copiée. Ouverture de TeleGuard… Vous pourrez vérifier puis envoyer.');
+    copyRequest(textMessage);
+    // L'ouverture est déclenchée immédiatement dans le geste utilisateur.
+    openMessagingApp(app, textMessage);
+    return;
   }
 });
 
-// Clic direct sur chaque moyen de contact : copie l'identifiant/adresse et ouvre le moyen correspondant.
+// Clic direct sur chaque moyen de contact : copie l'identifiant puis ouvre l'application.
 document.querySelectorAll('.contact-link[data-app]').forEach(link=>{
   link.addEventListener('click',e=>{
     const app=link.dataset.app;
     const id=link.dataset.id || link.textContent.trim();
-    if(app==='email'){
-      e.preventDefault();
-      copyText(id);
-      window.location.href='mailto:'+encodeURIComponent(id);
-      return;
-    }
+    if(app==='email') return; // mailto reste géré nativement
     e.preventDefault();
-    try{ navigator.clipboard?.writeText(id).catch(()=>{}); }catch(err){}
-    if(app==='signal'){
-      showToast('Nom d’utilisateur Signal copié. Ouverture de Signal…');
-      try{ window.location.href='sgnl://'; }catch(err){}
-      setTimeout(()=>{ try{ window.open('https://signal.me/','_blank','noopener,noreferrer'); }catch(err){} },700);
-    }else if(app==='teleguard'){
-      showToast('Identifiant TeleGuard copié. Ouverture de TeleGuard…');
-      try{ window.location.href='teleguard://'; }catch(err){}
-    }
+    copyText(id);
+    showToast(app==='signal'?'Identifiant Signal copié. Ouverture de Signal…':'Identifiant TeleGuard copié. Ouverture de TeleGuard…');
+    openMessagingApp(app, id);
   });
 });
+
 /* legal modal */
 const legal=document.getElementById('legalModal');document.getElementById('legalBtn').onclick=()=>{legal.classList.add('open');document.body.classList.add('modal-open')};function closeLegal(){legal.classList.remove('open');document.body.classList.remove('modal-open')}document.getElementById('legalClose').onclick=closeLegal;legal.onclick=e=>{if(e.target===legal)closeLegal()};
 /* Assistant moderne : construit automatiquement sa base de connaissances depuis le contenu actuel de la page. */
